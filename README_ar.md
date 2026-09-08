@@ -14,11 +14,6 @@
 
 Astra نموذج من OpenAI للاستدلال المعقد والبرمجة والبحث والمهام متعددة الخطوات. يستقبل نصوصًا وصورًا ويُخرج نصوصًا. يتطلب التصفح وتشغيل البرامج وإنتاج الفيديو أدوات مناسبة في التطبيق الذي تستخدمه.
 
-| النموذج | `gpt-6-astra` |
-| --- | --- |
-| السياق | 1,050,000 tokens |
-| الحد الأقصى للمخرجات | 128,000 tokens |
-| مستوى الاستدلال | `low` · `medium` · `high` · `xhigh` · `max` |
 
 [وثائق النموذج الرسمية](https://developers.openai.com/api/docs/models/gpt-6-astra) · [الإعدادات والميزات المتقدمة](https://developers.openai.com/api/docs/guides/latest-model)
 
@@ -30,26 +25,34 @@ Astra نموذج من OpenAI للاستدلال المعقد والبرمجة و
 خطط لفعالية لمدة يومين في مقهى بميزانية 2000 يوان وموظفين اثنين. قدم القواعد والجدول الزمني وتفاصيل الميزانية وثلاث رسائل ترويجية. تحقق من مجموع التكاليف ووضح الافتراضات.
 ```
 
-## شغّل المثال الأول
+## استخدمه مباشرة في العميل
 
-استخدم Python 3.10+ أو Node.js 20+ من المجلد الرئيسي للمستودع. تعتمد البرامج المرفقة على المكتبات المدمجة ولا تتطلب تثبيت حزم. عاين الطلب مجانًا أولًا:
+سجّل الدخول بحساب ChatGPT دون إعداد مفتاح API مسبقًا. يعتمد الوصول إلى Astra وحدود الاستخدام على الحساب ومساحة العمل.
+
+### ChatGPT
+
+سجّل الدخول إلى ChatGPT واختر Work لإعداد مخرجات مكتملة. اختر Astra من قائمة النموذج/Power وافتح Advanced عند الحاجة. أرفق صورة الميزانية واطلب مقارنة 24 مشاركًا مع 32.
+
+### Codex
+
+سجّل الدخول إلى عميل Codex؛ في تطبيق سطح المكتب الموحّد انتقل إلى Codex. افتح مجلد مشروع محليًا وابدأ مهمة مع Astra، ثم اطلب تشغيل التمارين وتسليم الملفات ونتائج الفحص الفعلية.
+
+### Codex CLI
+
+[تثبيت CLI](https://learn.chatgpt.com/docs/cli). ثبّت CLI من الصفحة الرسمية وشغّله داخل المشروع. اختر Sign in with ChatGPT أول مرة. داخل الجلسة استخدم /model لتأكيد Astra و/status لفحص الإعدادات، ثم صف المهمة بلغتك.
 
 ```bash
-python3 examples/astra.py text --dry-run
-node examples/quickstart.mjs --dry-run
+codex -m gpt-6-astra
 ```
 
-قبل الاستدعاء الحقيقي، اضبط `OPENAI_API_KEY` في الطرفية باستخدام مفتاح مشروع OpenAI يملك وصولًا إلى Astra. راجع [خطوات الإعداد](docs/quickstart.md#用-api-开始). لا تضع المفاتيح في الكود أو الصور. لا يتصل `--dry-run` بالشبكة، أما الطلبات الحقيقية فتترتب عليها رسوم. تستخدم الأمثلة OpenAI API مباشرة؛ تحقق بشكل منفصل من توفر النموذج لدى Flaq.ai.
+[خطوات مفصلة بالصينية](docs/quickstart.md) · [English](README.md) · [Models](https://learn.chatgpt.com/docs/models)
 
-```bash
-python3 examples/astra.py text --prompt 'خطط لفعالية لمدة يومين في مقهى بميزانية 2000 يوان وموظفين اثنين. قدم القواعد والجدول الزمني وتفاصيل الميزانية وثلاث رسائل ترويجية. تحقق من مجموع التكاليف ووضح الافتراضات.'
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
-python3 examples/astra.py research
-python3 examples/astra.py extract
-node examples/quickstart.mjs
-```
+<details>
+<summary>API اختياري لدمج تطبيقك الخاص</summary>
 
-[أمثلة برمجية](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
+[API](docs/api.md) · [Python / JavaScript](examples/README.md)
+
+</details>
 
 ## شغّل تماريننا الأصلية
 

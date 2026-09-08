@@ -8,96 +8,77 @@ The latest practical GPT-6 Astra guide curated by the **[flaq.ai](https://flaq.a
 
 **Last reviewed: September 8, 2026.** An independent team-curated guide; not official OpenAI documentation. Dates identify the reviewed edition, and product details may change.
 
-## Start here
+## Start here: choose your app
 
-| Your goal | Read / run | What you get |
+Use **GPT-6 Astra directly in ChatGPT, the Codex client, or Codex CLI**. Start by signing in with ChatGPT; this route does not require an API key. Model availability and usage depend on your account, workspace, and rollout. [Official model selection](https://learn.chatgpt.com/docs/models)
+
+| Your goal | Start with | First action |
 | --- | --- | --- |
-| Try Astra without coding | [Beginner guide](docs/quickstart.md#不用写代码) | A small task with clear acceptance criteria |
-| Make your first API call | [API setup](docs/quickstart.md#用-api-开始) | Python and JavaScript entry points |
-| Try original exercises | [12 original exercises](docs/cases.md) | Three runnable labs and nine extension exercises |
-| Build something yourself | [6 practical workflows](docs/workflows.md) | Websites, games, 3D, video, research, and code review |
-| Analyze images or extract JSON | [Examples](examples/README.md) | Four Python modes and a JavaScript example |
-| Troubleshoot a request | [Errors and cost](docs/quickstart.md#常见问题) | Authentication, limits, incomplete output, and cost basics |
+| Analyze an image, plan an event, create a document | ChatGPT / Work | Select Astra and attach your material |
+| Build a webpage, change local files, try Blender | Codex client | Open a local project folder and select Astra |
+| Work from a terminal | Codex CLI | Run `codex -m gpt-6-astra` in your project |
 
-The READMEs are available in 12 languages. The original lab has an English walkthrough; other detailed `docs/` tutorials and example diagnostics are currently in Simplified Chinese; the quickstart below works on its own.
+Astra can reason through complex tasks and work with tools. The surrounding app supplies file, browser, and software access. Choosing Astra alone does not connect a web chat to local Blender.
 
-## What is GPT-6 Astra?
+## 1. ChatGPT: attach a file and ask
 
-Astra is an OpenAI model for complex reasoning, coding, research, and work involving multiple steps and tools. It accepts text and images and produces text. Browsing, running software, and creating media require suitable tools in the surrounding application.
-
-| Item | Documented value |
-| --- | --- |
-| API model | `gpt-6-astra` |
-| Context window | 1,050,000 tokens |
-| Maximum output | 128,000 tokens |
-| Knowledge cutoff | April 30, 2026 |
-| Reasoning effort | `low`, `medium`, `high`, `xhigh`, `max` |
-| Standard text pricing, per 1M tokens | Input $10 · cached input $1 · output $50 |
-
-Source: [OpenAI model documentation](https://developers.openai.com/api/docs/models/gpt-6-astra). Tool charges and long-context rates can differ. Confirm model access and billing for your account. Creating a video typically means coordinating editing, rendering, or generation tools; it does not mean the Astra endpoint natively outputs video.
-
-## Your first task — no code needed
-
-Choose Astra in a product where your account has access, provide your materials, and start with a small deliverable:
+1. Sign in to ChatGPT on the web or in the app. Choose **Work** for research and finished deliverables.
+2. Open the model / **Power** picker and choose an **Astra** option. If available, open **Advanced** to check the exact model. Labels can vary by version.
+3. Attach [our budget screenshot](assets/screenshots/workshop-budget.png) and send:
 
 ```text
-Plan a two-day event for a local coffee shop.
-Goal: encourage first-time visitors to return.
-Constraints: budget of CNY 2,000; two staff members; use the existing shop and social account.
-Deliver: event rules, a schedule, an itemized budget, and three promotional messages.
-Check: the budget adds up, each action has a time and responsible role,
-and any assumptions are explicit. Do not invent customer data.
+Read the workshop budget in this image. Recalculate each cost and the remaining money.
+Compare 24 guests with 32 guests, keeping fixed costs unchanged.
+Does each scenario keep at least 10% of the total budget in reserve?
+Show the arithmetic and two practical suggestions. Flag unreadable numbers.
 ```
 
-Inspect the result, then ask for a focused revision. For coding or design work, request source files, launch instructions, and screenshots of the actual result.
+Check the answer: 24 guests cost CNY 2,168, leaving CNY 432. At 32 guests, CNY 2,584 leaves only CNY 16, below the reserve target. Continue in the same conversation with a focused change. [Official app quickstart](https://learn.chatgpt.com/docs/quickstart)
 
-## Run your first API example
+## 2. Codex client: open a folder and make something
 
-Use **Python 3.10+** or **Node.js 20+**. Run commands from the repository root. The included scripts use built-in libraries and require no package installation.
+1. Open your Codex client and sign in with ChatGPT. In the unified ChatGPT desktop app, select **Codex** from the product menu.
+2. Create a project or open a local folder. For these exercises, select this repository's folder.
+3. Start a task, select **Astra** in the model / Power picker, and send:
+
+```text
+Read this repository's instructions. Run examples/field_lab.py into a fresh output folder.
+Open the three reports and explain the budget, frame timeline, and release checks.
+Generate another report for 32 guests and compare the reserve.
+Deliver clickable file paths and actual verification results; report missing tools.
+```
+
+To build something new, open an empty project and ask for a workshop signup page with a guest selector: fixed costs CNY 920, CNY 52 per guest, budget CNY 2,600. Ask it to check both 24 and 32 guests and the narrow-screen layout.
+
+For 3D, ask Codex to follow [the Blender playbook](docs/blender-playbook.md), inspect whether Blender is installed, and check the editable model before adding lighting and rendering. MCP and Computer Use are task-specific tools, not prerequisites for every Astra task.
+
+## 3. Codex CLI: sign in and start in your project
+
+Install using the option for your system on the [official CLI page](https://learn.chatgpt.com/docs/cli). The macOS / Linux standalone installer is:
 
 ```bash
-# Offline: inspect a request without an API key, network access, or charges
-python3 examples/astra.py text --dry-run
-node examples/quickstart.mjs --dry-run
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
 ```
 
-To make a real request, set `OPENAI_API_KEY` for an OpenAI API project with Astra access. In Bash, read the key without saving it in command history:
+Open a terminal in your project folder, then run:
 
 ```bash
-bash
-read -r -s -p 'OpenAI API key: ' OPENAI_API_KEY
-export OPENAI_API_KEY
-
-python3 examples/astra.py text \
-  --prompt 'Explain three checks for an AI-generated website in English.'
+codex -m gpt-6-astra
 ```
 
-Windows PowerShell:
+On first launch choose **Sign in with ChatGPT** and finish the browser sign-in. In the Codex session, use `/model` to confirm Astra or adjust reasoning, and `/status` to inspect session configuration. Then type a normal task, such as “Read this project, explain how it runs, and fix one reproducible issue.”
 
-```powershell
-$astraSecureKey = Read-Host 'OpenAI API key' -AsSecureString
-$env:OPENAI_API_KEY = [System.Net.NetworkCredential]::new('', $astraSecureKey).Password
-python examples/astra.py text --prompt 'Explain three checks for an AI-generated website in English.'
-```
-
-Expect a text answer and token usage. Real requests incur API charges. Keep keys out of source files and screenshots. The scripts do not load `.env` files automatically.
-
-### Four Python modes and JavaScript
+You can also attach an image when starting from this repository:
 
 ```bash
-python3 examples/astra.py text --prompt 'Write a checklist for reviewing a landing page.'
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png \
-  --prompt 'Describe the visible layout and components in English. Separate observations from guesses.'
-python3 examples/astra.py research \
-  --prompt 'Research Astra setup in official OpenAI documentation. Answer in English with source links.'
-python3 examples/astra.py extract \
-  --prompt 'Extract action items: Alex will review the screenshots by Friday. Sam will check mobile layout. Use null for missing details.'
-node examples/quickstart.mjs
+codex -m gpt-6-astra -i assets/screenshots/workshop-budget.png "Check this budget against examples/fixtures/studio-brief.json."
 ```
 
-`vision` sends the selected image to the API. `research` filters searches to OpenAI documentation domains and prints returned citations. `extract` uses a strict JSON schema. `--output outputs/result.json` saves the full response; `--dry-run` previews any Python mode without sending it. JavaScript uses the prompt defined in [quickstart.mjs](examples/quickstart.mjs).
+Use `codex resume --last` from your project directory to continue the last session; check `/model` after resuming. These CLI flags were checked against local help; no new paid model session was run for this documentation update.
 
-These examples call the **OpenAI API directly** and use an OpenAI key. They are not a Flaq.ai endpoint configuration. Model availability on Flaq.ai should be checked separately.
+**Astra missing?** Update your client and check the model / Advanced list and your account or workspace access. Specifying a model name does not grant access. ChatGPT sign-in uses your applicable plan's usage rules, rather than making usage free.
+
+[Detailed Chinese setup and troubleshooting](docs/quickstart.md) · [12 original exercises](docs/cases.md) · [Blender playbook: English / 中文](docs/blender-playbook.md)
 
 ## Run our original field lab
 
@@ -131,7 +112,11 @@ Release review: 3 of 5 fictional checks pass; two need work.
 4. Check actual behavior, calculations, or file contents.
 5. Revise using a screenshot or a reproducible error.
 
-[OpenAI's model guide](https://developers.openai.com/api/docs/guides/latest-model) covers reasoning settings and advanced features. The API examples default to `low`; increase effort only when the task benefits from it. Use the documented settings rather than copying incompatible parameters from older examples.
+Start with the client’s default reasoning setting. If the task needs deeper work, adjust the model / Power controls or use `/model` in Codex CLI. [Official model controls](https://learn.chatgpt.com/docs/models)
+
+## Optional: integrate the API
+
+Building your own application? Keep the [API setup](docs/api.md) and [Python / JavaScript examples](examples/README.md) for that stage. Direct use through ChatGPT sign-in does not require these steps.
 
 ## Verification and contributions
 

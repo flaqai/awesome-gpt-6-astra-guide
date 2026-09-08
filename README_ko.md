@@ -14,11 +14,6 @@
 
 Astra는 복잡한 추론, 코딩, 조사와 여러 단계의 작업을 위한 OpenAI 모델입니다. 텍스트와 이미지를 입력받고 텍스트를 출력합니다. 브라우저 조작, 프로그램 실행, 영상 제작에는 실행 환경의 별도 도구가 필요합니다.
 
-| 모델 | `gpt-6-astra` |
-| --- | --- |
-| 컨텍스트 | 1,050,000 tokens |
-| 최대 출력 | 128,000 tokens |
-| 추론 강도 | `low` · `medium` · `high` · `xhigh` · `max` |
 
 [공식 모델 문서](https://developers.openai.com/api/docs/models/gpt-6-astra) · [설정과 고급 기능](https://developers.openai.com/api/docs/guides/latest-model)
 
@@ -30,26 +25,34 @@ Astra는 복잡한 추론, 코딩, 조사와 여러 단계의 작업을 위한 O
 카페의 이틀짜리 행사를 계획해 주세요. 예산은 2,000위안, 직원은 두 명입니다. 행사 규칙, 일정, 항목별 예산, 홍보 문구 세 개를 작성하고 합계와 가정을 확인해 주세요.
 ```
 
-## 첫 예제 실행하기
+## 클라이언트에서 바로 사용
 
-Python 3.10+ 또는 Node.js 20+를 사용하고 저장소 루트에서 실행하세요. 포함된 스크립트는 기본 라이브러리만 사용하므로 패키지 설치가 필요하지 않습니다. 먼저 요청을 무료로 미리 봅니다.
+ChatGPT 계정으로 로그인하여 시작하며 API 키를 먼저 설정할 필요가 없습니다. Astra 접근과 한도는 계정 및 작업 공간에 따라 다릅니다.
+
+### ChatGPT
+
+ChatGPT에 로그인하고 결과물 제작에는 Work를 선택합니다. 모델/Power에서 Astra를 고르고 필요하면 Advanced에서 확인합니다. 예산 이미지를 첨부하고 24명과 32명을 비교해 달라고 요청합니다.
+
+### Codex
+
+Codex 클라이언트에 로그인합니다. 통합 데스크톱 앱에서는 Codex로 전환하고 로컬 프로젝트 폴더를 엽니다. 새 작업에서 Astra를 선택해 실습 실행, 파일과 실제 점검 결과를 요청합니다.
+
+### Codex CLI
+
+[CLI 설치](https://learn.chatgpt.com/docs/cli). 공식 페이지에서 CLI를 설치하고 프로젝트 폴더에서 시작합니다. 처음에는 Sign in with ChatGPT를 선택합니다. 세션 안에서 /model로 Astra를, /status로 설정을 확인한 후 일상 언어로 요청합니다.
 
 ```bash
-python3 examples/astra.py text --dry-run
-node examples/quickstart.mjs --dry-run
+codex -m gpt-6-astra
 ```
 
-실제 호출 전에는 Astra 권한이 있는 OpenAI 프로젝트 키를 현재 터미널의 `OPENAI_API_KEY`에 설정하세요. [설정 안내](docs/quickstart.md#用-api-开始)를 참고하고 키를 코드나 스크린샷에 넣지 마세요. `--dry-run`은 통신하지 않으며 실제 요청은 유료입니다. 예제는 OpenAI API를 직접 호출합니다. Flaq.ai의 모델 제공 여부는 별도로 확인해야 합니다.
+[자세한 단계(중국어)](docs/quickstart.md) · [English](README.md) · [Models](https://learn.chatgpt.com/docs/models)
 
-```bash
-python3 examples/astra.py text --prompt '카페의 이틀짜리 행사를 계획해 주세요. 예산은 2,000위안, 직원은 두 명입니다. 행사 규칙, 일정, 항목별 예산, 홍보 문구 세 개를 작성하고 합계와 가정을 확인해 주세요.'
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
-python3 examples/astra.py research
-python3 examples/astra.py extract
-node examples/quickstart.mjs
-```
+<details>
+<summary>API는 자체 앱에 통합할 때만</summary>
 
-[코드 예제](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
+[API](docs/api.md) · [Python / JavaScript](examples/README.md)
+
+</details>
 
 ## 독자적으로 만든 실습 실행
 

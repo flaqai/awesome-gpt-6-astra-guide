@@ -4,6 +4,14 @@
 
 Inspired by [《用GPT-6 Astra操控Blender玩3D，保姆级教程来了。》](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ), published by **数字生命卡兹克**, credited to **卡兹克、可达**, September 8, 2026. The article introduces desktop control, MCP, scripting, and combining generated assets with Blender. The exercises and code below were independently written for this guide; we do not reproduce the article's images, long prompts, or benchmark claims.
 
+## Start from the client you already use
+
+- **ChatGPT / Work:** choose Astra and attach your sketch for a modeling plan. For local Blender execution, use a desktop environment with the needed tool connection.
+- **Codex client:** open this repository's local folder, choose Astra, and ask it to follow this playbook, inspect Blender availability, and run the original script when the environment is ready.
+- **Codex CLI:** start `codex -m gpt-6-astra` in this repository, sign in with ChatGPT, and paste the same task. CLI can run installed local commands; GUI access needs a suitable integration.
+
+No API key is required for the ChatGPT sign-in route. [Detailed setup / 中文操作步骤](quickstart.md)
+
 ## Choose one small project
 
 | Project | First deliverable | Check before expanding |

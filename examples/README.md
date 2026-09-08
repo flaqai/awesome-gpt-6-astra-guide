@@ -1,6 +1,8 @@
-# 可以直接运行的代码示例
+# 代码示例：原创实验与可选 API 接入
 
-[中文首页](../README_zh.md) · [English](../README.md) · [设置 API key](../docs/quickstart.md#用-api-开始)
+[中文首页](../README_zh.md) · [English](../README.md) · [设置 API key](../docs/api.md#用-api-开始)
+
+**先用客户端也可以。** 想直接聊天或制作项目，先看 [ChatGPT / Codex / CLI 入门](../docs/quickstart.md)。本页的 API 密钥与请求参数只面向自行接入模型的开发者；离线实验和 Blender 脚本另有各自的本地运行要求。
 
 这些是本仓库编写的教学示例，不是社区作品源码。Python 文件使用标准库，JavaScript 文件使用 Node.js 内置 `fetch`；不用安装 SDK。API 协议字段依据官方文档，实战数据来自本仓库原创资料。
 

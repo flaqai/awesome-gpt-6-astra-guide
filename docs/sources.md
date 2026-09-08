@@ -49,3 +49,9 @@
 - [OpenAI Computer Use](https://learn.chatgpt.com/docs/computer-use) 与 [MCP 指引](https://learn.chatgpt.com/zh-Hans/docs/extend/mcp)：核对客户端插件与工具连接方式。
 
 新增桌面机器人脚本由本指南独立编写，仅验证 Python 语法，未在 Blender 实跑。所有语言 README 底部都保留微信原文链接、署名与引用范围。
+
+## 客户端优先入门更新（2026-09-08）
+
+[官方模型选择](https://learn.chatgpt.com/docs/models)、[产品快速开始](https://learn.chatgpt.com/docs/quickstart)、[Codex CLI](https://learn.chatgpt.com/docs/cli) 已读取，用于核对 ChatGPT / Work、桌面 Codex、Astra 选择器和 CLI 的 ChatGPT 登录路线。`codex -m gpt-6-astra` 来自官方模型页；`-m`、`-i`、`resume --last` 同时与本机 CLI 帮助核对。没有据此保证所有账号已开放 Astra，也未进行新的付费会话验证。
+
+首页不再将 API key、JSON 参数和 token 计费作为入门要求；这些内容保留在 [API 进阶说明](api.md)。微信文章继续位于所有 README 底部，作为 Blender 创作启发来源。

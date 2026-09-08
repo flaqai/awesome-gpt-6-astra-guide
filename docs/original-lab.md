@@ -33,28 +33,26 @@ Expected: spending rises to **2,584 CNY** and only **16 CNY** remains. The event
 
 Edit a copy of [studio-brief.json](../examples/fixtures/studio-brief.json) to change costs, shot durations, or observed check values. Pass it with `--brief path/to/your-brief.json`. Money is represented as whole CNY for this exercise; no tax, currency conversion, or fractional-second timing is implemented. There must be exactly three shots and at most five cost lines and five release checks, matching the compact report layout. Use a new `--out` directory or explicitly pass `--overwrite` to regenerate existing files.
 
-## 3. Ask Astra to reason about that evidence
+## 3. Discuss the evidence directly in ChatGPT or Codex
 
-First inspect the request without a key or network access:
+**ChatGPT / Work:** select Astra, attach the budget PNG and paste the relevant numbers from `results.json`. Ask it to compare the 24-guest and 32-guest scenarios and explain which constraints fail.
 
-```bash
-python3 examples/astra.py text \
-  --brief outputs/field-lab-32/results.json \
-  --prompt 'Explain why this workshop fails its reserve target. Propose two alternatives using the supplied numbers; state tradeoffs and assumptions.' \
-  --dry-run
+**Codex client:** open this repository as a local project, select Astra, and send:
 
-python3 examples/astra.py vision \
-  --image assets/screenshots/workshop-budget.png \
-  --brief outputs/field-lab/results.json \
-  --prompt 'Compare the visible budget with the JSON. List discrepancies, if any, and distinguish arithmetic facts from suggestions.' \
-  --dry-run
-
-node examples/quickstart.mjs --dry-run
+```text
+Read outputs/field-lab/results.json and outputs/field-lab-32/results.json.
+Explain why the larger workshop fails its reserve target.
+Propose two alternatives using the supplied numbers; state assumptions and tradeoffs.
+Check the arithmetic against the local report, and give me the file paths you used.
 ```
 
-For a real request, set `OPENAI_API_KEY` using the [setup instructions](quickstart.md#用-api-开始), then remove `--dry-run`. Python sends the supplied JSON and, in vision mode, the selected image to OpenAI; use only data you intend to send. The JSON file must be an object and at most 64 KiB. JavaScript loads the bundled fixture, compares each release observation with its target using strict equality, and asks Astra for a focused response to the failed checks.
+**Codex CLI:** sign in with ChatGPT, start `codex -m gpt-6-astra` in the repository, then paste the same task. Codex can also run the lab for you when the required local tools are available. See the [client-first quickstart](quickstart.md).
 
-The local calculations give you a reference to check the answer against. Neither API client executes the model's suggestions or marks a real project as passing. No paid API response is included in this repository.
+The local calculations give you a reference to check the answer against. Suggestions do not automatically change the fixture or mark a real project as passing. Direct Astra use follows your account's usage rules; generating the reports alone is offline.
+
+### Optional API integration
+
+Only if you are connecting your own application, use [API setup](api.md) and [the examples](../examples/README.md). Python supports `--brief` for sending the JSON with a request. This is an additional integration route, not a requirement for completing the exercise.
 
 ## 中文快速说明
 

@@ -14,11 +14,6 @@
 
 Astra は、複雑な推論、コーディング、調査、複数ステップの作業向けの OpenAI モデルです。テキストと画像を入力し、テキストを出力します。ブラウザー操作、ソフトウェアの実行、動画制作には、利用環境側のツールが必要です。
 
-| モデル | `gpt-6-astra` |
-| --- | --- |
-| コンテキスト | 1,050,000 tokens |
-| 最大出力 | 128,000 tokens |
-| 推論レベル | `low` · `medium` · `high` · `xhigh` · `max` |
 
 [公式モデル資料](https://developers.openai.com/api/docs/models/gpt-6-astra) · [設定と高度な使い方](https://developers.openai.com/api/docs/guides/latest-model)
 
@@ -30,26 +25,34 @@ Astra は、複雑な推論、コーディング、調査、複数ステップ�
 カフェの2日間のイベントを計画してください。予算は2,000人民元、スタッフは2人です。ルール、時間割、予算表、宣伝文3本を作成し、合計額と仮定を確認してください。
 ```
 
-## 最初のサンプルを実行する
+## クライアントから直接使う
 
-Python 3.10+ または Node.js 20+ を使用し、リポジトリのルートで実行します。付属スクリプトは標準機能だけを使うため、パッケージのインストールは不要です。まずリクエストを無料で確認します。
+ChatGPTアカウントでログインして開始できます。APIキーの事前設定は不要です。Astraの利用可否と上限はアカウントやワークスペースにより異なります。
+
+### ChatGPT
+
+ChatGPTにログインし、成果物の制作にはWorkを選びます。モデル／PowerからAstraを選択し、必要ならAdvancedで確認。予算画像を添付し、24人と32人を比較するよう依頼します。
+
+### Codex
+
+Codexクライアントにログインします。統合デスクトップアプリではCodexに切り替え、ローカルフォルダーを開きます。新しいタスクでAstraを選び、独自実習の実行、ファイルと検証結果の提出を依頼します。
+
+### Codex CLI
+
+[CLIのインストール](https://learn.chatgpt.com/docs/cli). 公式ページからCLIをインストールし、プロジェクト内で起動します。初回はSign in with ChatGPTを選択。セッション内の/modelでAstra、/statusで設定を確認し、普通の言葉で依頼します。
 
 ```bash
-python3 examples/astra.py text --dry-run
-node examples/quickstart.mjs --dry-run
+codex -m gpt-6-astra
 ```
 
-実際に呼び出す前に、Astra を利用できる OpenAI プロジェクトのキーを、現在のターミナルの `OPENAI_API_KEY` に設定します。[設定手順](docs/quickstart.md#用-api-开始)を参照してください。キーをコードや画像に含めないでください。`--dry-run` は通信せず、実際のリクエストは課金対象です。サンプルは OpenAI API を直接使います。Flaq.ai でのモデル提供状況は別途確認してください。
+[詳しい手順（中国語）](docs/quickstart.md) · [English](README.md) · [Models](https://learn.chatgpt.com/docs/models)
 
-```bash
-python3 examples/astra.py text --prompt 'カフェの2日間のイベントを計画してください。予算は2,000人民元、スタッフは2人です。ルール、時間割、予算表、宣伝文3本を作成し、合計額と仮定を確認してください。'
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
-python3 examples/astra.py research
-python3 examples/astra.py extract
-node examples/quickstart.mjs
-```
+<details>
+<summary>APIは独自アプリへの組み込み時に</summary>
 
-[コード例](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
+[API](docs/api.md) · [Python / JavaScript](examples/README.md)
+
+</details>
 
 ## 独自の実習を動かす
 

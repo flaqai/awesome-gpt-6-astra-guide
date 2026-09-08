@@ -14,11 +14,6 @@
 
 Astra 是 OpenAI 用於複雜推理、程式開發、研究及多步驟工作的模型。它接受文字與圖片，輸出文字；瀏覽、執行軟體及製作影音需要應用環境提供相應工具。
 
-| 模型 | `gpt-6-astra` |
-| --- | --- |
-| 上下文 | 1,050,000 tokens |
-| 最大輸出 | 128,000 tokens |
-| 推理強度 | `low` · `medium` · `high` · `xhigh` · `max` |
 
 [官方模型文件](https://developers.openai.com/api/docs/models/gpt-6-astra) · [參數與進階用法](https://developers.openai.com/api/docs/guides/latest-model)
 
@@ -30,26 +25,34 @@ Astra 是 OpenAI 用於複雜推理、程式開發、研究及多步驟工作的
 為咖啡店規劃兩天活動。預算人民幣 2000 元，兩位店員。交付活動規則、時間表、預算和三則文案。確認預算加總正確，並明確標示假設。
 ```
 
-## 執行第一個範例
+## 直接在客戶端使用
 
-使用 Python 3.10+ 或 Node.js 20+，在儲存庫根目錄執行。完整腳本使用內建函式庫，不需要安裝套件。先免費預覽請求：
+以 ChatGPT 帳號登入即可開始，無需先設定 API key；Astra 的可用性與額度依帳號及工作區而定。
+
+### ChatGPT
+
+登入 ChatGPT，製作完整成果時選 Work；在模型／Power 選單選 Astra，必要時開啟 Advanced。上傳預算圖，要求比較 24 人與 32 人的費用。
+
+### Codex
+
+登入 Codex 客戶端；統一桌面應用可切換至 Codex。開啟本機專案資料夾，新建任務並選 Astra，要求執行原創實驗並交付檔案與實際檢查結果。
+
+### Codex CLI
+
+[安裝 CLI](https://learn.chatgpt.com/docs/cli). 先依官方安裝頁安裝 CLI，在專案目錄啟動。首次選 Sign in with ChatGPT 完成登入；在互動介面用 /model 核對 Astra、/status 查看設定，再直接輸入任務。
 
 ```bash
-python3 examples/astra.py text --dry-run
-node examples/quickstart.mjs --dry-run
+codex -m gpt-6-astra
 ```
 
-真實呼叫前，請在目前終端設定有 Astra 權限的 OpenAI 專案密鑰 `OPENAI_API_KEY`。請依照 [設定教學](docs/quickstart.md#用-api-开始) 操作，不要將密鑰放進程式碼或截圖。`--dry-run` 不連線；真實請求會產生費用。範例直接呼叫 OpenAI API，Flaq.ai 的模型供應情況需另行確認。
+[詳細步驟（中文）](docs/quickstart.md) · [English](README.md) · [Models](https://learn.chatgpt.com/docs/models)
 
-```bash
-python3 examples/astra.py text --prompt '為咖啡店規劃兩天活動。預算人民幣 2000 元，兩位店員。交付活動規則、時間表、預算和三則文案。確認預算加總正確，並明確標示假設。'
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
-python3 examples/astra.py research
-python3 examples/astra.py extract
-node examples/quickstart.mjs
-```
+<details>
+<summary>API 僅供自行開發應用時使用</summary>
 
-[程式範例](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
+[API](docs/api.md) · [Python / JavaScript](examples/README.md)
+
+</details>
 
 ## 執行本專案原創實驗
 

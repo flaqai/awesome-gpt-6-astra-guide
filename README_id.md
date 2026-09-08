@@ -14,11 +14,6 @@ Terakhir diperiksa: 2026-09-08. Ini panduan independen dari tim, bukan dokumenta
 
 Astra adalah model OpenAI untuk penalaran kompleks, pemrograman, riset, dan tugas bertahap. Model menerima teks dan gambar lalu menghasilkan teks. Penjelajahan web, eksekusi perangkat lunak, dan pembuatan video memerlukan alat di aplikasi yang digunakan.
 
-| Model | `gpt-6-astra` |
-| --- | --- |
-| Konteks | 1,050,000 tokens |
-| Keluaran maksimum | 128,000 tokens |
-| Tingkat penalaran | `low` · `medium` · `high` · `xhigh` · `max` |
 
 [Dokumentasi resmi](https://developers.openai.com/api/docs/models/gpt-6-astra) · [Parameter dan fitur lanjutan](https://developers.openai.com/api/docs/guides/latest-model)
 
@@ -30,26 +25,34 @@ Pilih Astra dalam produk yang dapat Anda akses, berikan materi, dan minta hasil 
 Rencanakan acara dua hari untuk kedai kopi. Anggaran 2.000 yuan dengan dua staf. Buat aturan, jadwal, rincian anggaran, dan tiga pesan promosi. Periksa jumlah biaya dan jelaskan asumsi yang dipakai.
 ```
 
-## Jalankan contoh pertama
+## Gunakan langsung melalui klien
 
-Gunakan Python 3.10+ atau Node.js 20+ dari direktori utama repositori. Skrip memakai pustaka bawaan tanpa perlu memasang paket. Pratinjau permintaan secara gratis terlebih dahulu:
+Masuk dengan akun ChatGPT tanpa menyiapkan kunci API terlebih dahulu. Akses Astra dan batas penggunaan bergantung pada akun serta ruang kerja.
+
+### ChatGPT
+
+Masuk ke ChatGPT dan pilih Work untuk membuat hasil akhir. Pilih Astra pada model/Power; periksa Advanced jika tersedia. Lampirkan gambar anggaran dan minta perbandingan 24 dengan 32 peserta.
+
+### Codex
+
+Masuk ke klien Codex; pada aplikasi desktop terpadu, beralih ke Codex. Buka folder proyek lokal, buat tugas dengan Astra, lalu minta menjalankan latihan dan menyerahkan berkas beserta pemeriksaan nyata.
+
+### Codex CLI
+
+[Instal CLI](https://learn.chatgpt.com/docs/cli). Instal CLI dari halaman resmi dan jalankan di folder proyek. Pertama kali pilih Sign in with ChatGPT. Dalam sesi, gunakan /model untuk memastikan Astra dan /status untuk melihat pengaturan, lalu jelaskan tugas Anda.
 
 ```bash
-python3 examples/astra.py text --dry-run
-node examples/quickstart.mjs --dry-run
+codex -m gpt-6-astra
 ```
 
-Untuk panggilan nyata, atur `OPENAI_API_KEY` di terminal memakai kunci proyek OpenAI yang memiliki akses Astra. Lihat [pengaturan](docs/quickstart.md#用-api-开始). Jangan masukkan kunci ke kode atau tangkapan layar. `--dry-run` tidak terhubung ke jaringan; permintaan nyata dikenai biaya. Contoh memanggil OpenAI API secara langsung. Periksa ketersediaan model di Flaq.ai secara terpisah.
+[Langkah terperinci (Mandarin)](docs/quickstart.md) · [English](README.md) · [Models](https://learn.chatgpt.com/docs/models)
 
-```bash
-python3 examples/astra.py text --prompt 'Rencanakan acara dua hari untuk kedai kopi. Anggaran 2.000 yuan dengan dua staf. Buat aturan, jadwal, rincian anggaran, dan tiga pesan promosi. Periksa jumlah biaya dan jelaskan asumsi yang dipakai.'
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
-python3 examples/astra.py research
-python3 examples/astra.py extract
-node examples/quickstart.mjs
-```
+<details>
+<summary>API opsional untuk integrasi aplikasi sendiri</summary>
 
-[Contoh kode](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
+[API](docs/api.md) · [Python / JavaScript](examples/README.md)
+
+</details>
 
 ## Jalankan latihan orisinal kami
 

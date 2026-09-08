@@ -14,11 +14,6 @@ Dernière vérification : 2026-09-08. Ce guide indépendant ne constitue pas la 
 
 Astra est un modèle OpenAI conçu pour le raisonnement complexe, le code, la recherche et les tâches en plusieurs étapes. Il reçoit du texte et des images et produit du texte. La navigation, l’exécution de logiciels et la création vidéo nécessitent des outils dans l’application utilisée.
 
-| Modèle | `gpt-6-astra` |
-| --- | --- |
-| Contexte | 1,050,000 tokens |
-| Sortie maximale | 128,000 tokens |
-| Effort de raisonnement | `low` · `medium` · `high` · `xhigh` · `max` |
 
 [Documentation officielle](https://developers.openai.com/api/docs/models/gpt-6-astra) · [Paramètres et fonctions avancées](https://developers.openai.com/api/docs/guides/latest-model)
 
@@ -30,26 +25,34 @@ Sélectionnez Astra dans un produit auquel vous avez accès, fournissez vos docu
 Prépare un événement de deux jours pour un café. Budget : 2 000 yuans, avec deux employés. Fournis les règles, le planning, un budget détaillé et trois messages promotionnels. Vérifie le total et indique les hypothèses.
 ```
 
-## Exécuter un premier exemple
+## Utiliser directement dans votre client
 
-Utilisez Python 3.10+ ou Node.js 20+ depuis la racine du dépôt. Les scripts utilisent les bibliothèques intégrées et ne nécessitent aucune installation de paquet. Prévisualisez d’abord la requête gratuitement :
+Connectez-vous avec ChatGPT, sans configurer de clé API au préalable. L’accès à Astra et les limites dépendent du compte et de l’espace de travail.
+
+### ChatGPT
+
+Connectez-vous à ChatGPT et choisissez Work pour les livrables. Sélectionnez Astra dans modèle/Power, puis Advanced si nécessaire. Joignez le budget et demandez une comparaison entre 24 et 32 personnes.
+
+### Codex
+
+Connectez-vous au client Codex ; dans l’application unifiée, passez à Codex. Ouvrez un dossier local, créez une tâche, choisissez Astra et demandez l’exécution du laboratoire avec fichiers et vérifications réelles.
+
+### Codex CLI
+
+[Installer la CLI](https://learn.chatgpt.com/docs/cli). Installez la CLI depuis la page officielle et lancez-la dans votre projet. Choisissez Sign in with ChatGPT au premier lancement. Dans la session, /model permet de confirmer Astra et /status de vérifier les réglages ; décrivez ensuite votre tâche.
 
 ```bash
-python3 examples/astra.py text --dry-run
-node examples/quickstart.mjs --dry-run
+codex -m gpt-6-astra
 ```
 
-Pour un appel réel, définissez `OPENAI_API_KEY` dans le terminal avec la clé d’un projet OpenAI ayant accès à Astra. Consultez la [configuration](docs/quickstart.md#用-api-开始). Ne mettez pas de clé dans le code ou les captures. `--dry-run` ne se connecte pas ; les appels réels sont payants. Les exemples utilisent directement OpenAI. Vérifiez séparément les modèles proposés sur Flaq.ai.
+[Étapes détaillées (chinois)](docs/quickstart.md) · [English](README.md) · [Models](https://learn.chatgpt.com/docs/models)
 
-```bash
-python3 examples/astra.py text --prompt 'Prépare un événement de deux jours pour un café. Budget : 2 000 yuans, avec deux employés. Fournis les règles, le planning, un budget détaillé et trois messages promotionnels. Vérifie le total et indique les hypothèses.'
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
-python3 examples/astra.py research
-python3 examples/astra.py extract
-node examples/quickstart.mjs
-```
+<details>
+<summary>API facultative pour intégrer votre application</summary>
 
-[Exemples de code](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
+[API](docs/api.md) · [Python / JavaScript](examples/README.md)
+
+</details>
 
 ## Exécuter nos exercices originaux
 

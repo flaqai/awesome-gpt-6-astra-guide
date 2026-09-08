@@ -10,34 +10,60 @@
 
 README 提供 12 种语言，默认首页为英文。深入教程与示例诊断信息目前为简体中文。教程与练习由 flaq.ai 团队整理；案例保留原作者与出处，不代表作者公开了制作提示词，也不保证复现其完整作品。
 
-## 从这里开始
+## 从这里开始：选一个入口
 
-| 你想做什么 | 建议入口 | 完成后得到什么 |
+**可以在 ChatGPT、Codex 客户端、Codex CLI 中直接使用 GPT-6 Astra。** 先用 ChatGPT 账号登录、选择 Astra、发送任务，无需先配置 API key。能否选择 Astra 及使用额度取决于账号、工作区和开放阶段。[官方模型说明](https://learn.chatgpt.com/docs/models)
+
+| 目标 | 推荐入口 | 第一步 |
 | --- | --- | --- |
-| 不写代码，先试用 | [零基础入门](docs/quickstart.md#不用写代码) | 一份可检查的任务成果 |
-| 用代码调用 Astra | [API 快速开始](docs/quickstart.md#用-api-开始) | 第一次 Python / JavaScript 请求 |
-| 看有哪些强大玩法 | [12 个原创练习](docs/cases.md) | 3 个可运行实验与 9 个拓展任务 |
-| 复制指令开始做 | [6 套实战工作流](docs/workflows.md) | 网页、游戏、3D、视频、研究和代码审查提示词 |
-| 看图、研究、提取 JSON | [代码示例说明](examples/README.md) | 4 种 Python 调用模式 |
-| 解决报错与控制成本 | [排错与费用](docs/quickstart.md#常见问题) | 权限、限流、输出截断等问题的处理方法 |
+| 看图、方案、研究、整理文件 | ChatGPT / Work | 选择 Astra，添加图片或文件 |
+| 做网页、修改本地项目、玩 Blender | Codex 客户端 | 打开本地项目文件夹，选择 Astra |
+| 在终端读代码、改文件、运行工具 | Codex CLI | 在项目目录执行 `codex -m gpt-6-astra` |
 
-## Astra 是什么
+### ChatGPT：上传一张图就开始
 
-GPT-6 Astra 是 OpenAI 面向复杂任务的模型，适用于推理、编程、研究，以及结合工具的多步骤工作。它可以接收文字和图片、输出文字；浏览器、代码运行和图像生成等能力需要相应工具或产品环境。
+1. 登录 ChatGPT 网页或客户端，需要研究和完整交付物时选择 **Work**。
+2. 在模型／**Power** 选择器里选择 **Astra**；如有 **Advanced**，展开核对具体型号。
+3. 上传本仓库的预算截图，发送：
 
-| 项目 | 官方文档所列信息 |
-| --- | --- |
-| API 模型名 | `gpt-6-astra` |
-| 上下文窗口 | 1,050,000 tokens |
-| 最大输出 | 128,000 tokens |
-| 知识截止 | 2026-04-30；新信息需要检索 |
-| 推理强度 | `low`、`medium`、`high`、`xhigh`、`max` |
-| 输入 / 输出 | 文字和图片输入；文字输出 |
-| 标准文本价格 | 每百万 tokens：输入 $10，缓存输入 $1，输出 $50 |
+```text
+请复算这张预算图，比较 24 人和 32 人两种情况，固定成本保持不变。
+列出总支出、剩余金额，并判断是否满足预算 10% 的预留目标。
+交付计算过程与两条调整建议；看不清的数字不要猜。
+```
 
-规格来自 [官方模型页](https://developers.openai.com/api/docs/models/gpt-6-astra)。价格和权限可能变化；超过 272K 输入 tokens 的长请求有不同费率，工具调用另计，详见官方页面。产品订阅与 API 使用权限应分别确认。
+验收：24 人剩 432 元；32 人仅剩 16 元，未达到预留目标。[详细操作](docs/quickstart.md#chatgpt)
 
-“能制作视频”通常指组织工具完成工作，例如规划分镜、编写动画代码、调用素材工具、渲染和剪辑，不等于 Astra 模型端点原生接收或输出视频。
+### Codex 客户端：打开项目，让它动手
+
+1. 登录 Codex 客户端；统一桌面应用可从产品菜单切换到 **Codex**。
+2. 新建项目或打开本仓库所在的本地文件夹，新建任务并选择 **Astra**。
+3. 发送下面的指令，再点击它交付的文件检查：
+
+```text
+阅读当前仓库说明，运行 examples/field_lab.py，输出到新的目录。
+打开预算、分镜和验收报告，解释结果，再生成 32 人的对照版本。
+交付文件路径和实际检查结果；缺少环境就说明，不把计划说成已执行。
+```
+
+想做 3D，直接让它按 [Blender 趣味指引](docs/blender-playbook.md) 检查环境、运行原创机器人脚本并验收。MCP 或 Computer Use 按任务需要配置。[客户端详细步骤](docs/quickstart.md#codex-app)
+
+### Codex CLI：登录后像聊天一样使用
+
+先按 [官方安装页](https://learn.chatgpt.com/docs/cli) 安装 Codex CLI，再进入你的项目目录执行：
+
+```bash
+codex -m gpt-6-astra
+```
+
+首次选择 **Sign in with ChatGPT**，在浏览器完成登录。在 Codex 交互界面输入 `/model` 核对 Astra，输入 `/status` 查看会话配置，然后直接描述任务。退出后可在项目目录用 `codex resume --last` 继续。
+
+```bash
+# 在本仓库根目录运行，带上原创预算图
+codex -m gpt-6-astra -i assets/screenshots/workshop-budget.png "核对预算图与 examples/fixtures/studio-brief.json 是否一致。"
+```
+
+[安装、登录、模型选择与排错完整指引](docs/quickstart.md#codex-cli)。没有 Astra 时先检查更新与账号权限，命令不能绕过开放限制。无需 API key 不等于不消耗账号额度。
 
 ## 运行本项目原创实验
 
@@ -78,22 +104,9 @@ python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
 
 检查结果后，再追加：“把执行清单改成只需要两位店员的版本，保留预算上限。”从小成果开始，练习补充要求和迭代。
 
-## 最小代码示例
+## API：需要接入自己的产品时再看
 
-Python 3.10+，无需安装依赖。先离线运行原创实验，再预览发给 Astra 的请求：
-
-```bash
-python3 examples/field_lab.py
-python3 examples/astra.py text --brief outputs/field-lab/results.json --dry-run
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png --dry-run
-node examples/quickstart.mjs --dry-run
-```
-
-按 [快速开始](docs/quickstart.md#用-api-开始) 设置 `OPENAI_API_KEY` 后，去掉 `--dry-run` 才会进行真实付费调用。JSON 数据与选中的图片将发送给 OpenAI；不要输入不希望发送的资料。示例包含失败处理和用量显示，本次未进行付费 API 调用。
-
-[完整原创实验教程](docs/original-lab.md) · [代码与图片创作记录](docs/originality.md)
-
-这些示例直接调用 **OpenAI API**，使用 OpenAI 密钥；Flaq.ai 的模型目录与接口配置需另外确认。
+日常聊天、项目制作和终端协作先用上面的三条入口。开发自己的应用时，再看 [API 进阶说明](docs/api.md) 和 [Python / JavaScript 示例](examples/README.md)。
 
 ## 怎么让复杂任务更容易成功
 

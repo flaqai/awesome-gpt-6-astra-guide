@@ -1,148 +1,153 @@
-# 从零开始使用 GPT-6 Astra
+# 直接使用 GPT-6 Astra：ChatGPT、Codex 客户端、Codex CLI
 
-[中文首页](../README_zh.md) · [English](../README.md) · [查看案例](cases.md) · [代码说明](../examples/README.md)
+[中文首页](../README_zh.md) · [English](../README.md) · [趣味 Blender](blender-playbook.md) · [原创练习](cases.md)
 
-## 不用写代码
+**先登录账号、选择 Astra、发送任务即可开始。** 下面以 ChatGPT 账号登录为主，不要求先申请 API key、安装 Python SDK 或编写接口请求。模型选项、额度和工具权限取决于账号、工作区及开放阶段。核对日期：2026-09-08。[官方模型与可用入口](https://learn.chatgpt.com/docs/models)
 
-**先看模型是否可选。** 登录你正在使用的 ChatGPT / Codex 产品，在可用模型列表中确认 GPT-6 Astra。入口和可见选项随产品、账号与发布阶段变化；找不到时先查账号权限，不要把其他模型的结果标成 Astra。产品操作以 [官方入门文档](https://learn.chatgpt.com/docs/quickstart) 为准。
+| 你想做什么 | 建议入口 | 准备材料 |
+| --- | --- | --- |
+| 看图、做方案、研究、整理文档 | ChatGPT；需要完整交付物时选择 Work | 图片、文件、目标与限制 |
+| 修改本地项目、制作页面、运行 Blender 脚本 | Codex 客户端／桌面应用里的 Codex | 一个本地项目文件夹 |
+| 已习惯终端，希望读代码、改文件、运行命令 | Codex CLI | 本地项目目录及已安装的工具 |
 
-1. 新建任务。第一次先选一个小目标，如一页活动方案或一个待办页面。
-2. 选 Astra；若能设置推理强度，普通练习先用较低强度，复杂任务再提高。
-3. 加入材料：目标用户、参考图片、已有文件、截止时间、输出格式。
-4. 发送“目标 + 材料 + 约束 + 交付物 + 验收标准”。[工作流](workflows.md) 有完整模板。
-5. 检查实际成果，再反馈需要改变的部分。不要只看“已经完成”的文字总结。
+<a id="不用写代码"></a>
+<a id="chatgpt"></a>
 
-**预期结果**：你拿到可以阅读、打开或运行的成果。若只收到计划，追加：“请按上面的范围继续完成，交付文件，并说明实际检查结果。”
+## 1. 在 ChatGPT 中使用
 
-### 在 Codex 里做第一个项目
-
-打开一个空的项目文件夹，发送：
+1. 打开 ChatGPT 网页或客户端，用自己的 ChatGPT 账号登录。方案、资料分析和交付文件类任务可在新对话中选择 **Work**。
+2. 打开对话的模型／**Power** 选择器，选择包含 **Astra** 的选项；如果界面提供 **Advanced**，可展开查看具体模型。确认选择的是 Astra，再开始任务。不同版本不一定显示完全相同的按钮名称。[官方模型选择说明](https://learn.chatgpt.com/docs/models)
+3. 用附件按钮添加图片或文件，或直接粘贴材料。第一次可以上传本仓库的 `assets/screenshots/workshop-budget.png`。
+4. 复制下面的任务，发送后检查回答中的数字；继续在同一对话里提出改动。
 
 ```text
-在当前项目里做一个本地待办页面。
-功能：新增、完成、删除待办，刷新后保留记录。
-外观：中文，浅色，手机上单列显示；优先使用项目已有技术。
-交付：源文件、启动步骤、一张实际运行截图。
-验收：新增“买咖啡”后能勾选、删除；刷新后数据仍存在。
-先完成最小版本；常规设计细节由你决定并说明。
+请检查我上传的工作坊预算图，先读出人数、各项费用、总支出和预留金。
+逐项复算，并说明是否满足预算的 10% 预留目标。
+再分析人数从 24 增加到 32 时会发生什么，固定费用不变。
+交付：两种人数的对照表、计算过程、两条调整建议。
+看不清的数字请标明，不要猜。
 ```
 
-你需要做的是打开成果、逐项点击验收。如果浏览器或文件工具未启用，模型只能给出代码和操作说明；需要在产品环境中提供相应工具，才能代你运行。
+**怎么验收**：24 人应支出 2,168 元、剩余 432 元；32 人应支出 2,584 元、剩余 16 元。后者虽未超预算，却不满足 10% 预留目标。
 
-## 用 API 开始
+**继续追问**：“保持 32 人和 10% 预留目标，其他费用不变，预算至少要提高到多少？按整元向上取整。”可用 `2584 / 0.9` 对照，整元预算至少为 2,872 元。
 
-API 适合把 Astra 接入自己的脚本或应用。使用有模型权限的 OpenAI API 项目和密钥，并确认计费设置；不要默认聊天订阅包含 API 额度。[官方 API 快速开始](https://developers.openai.com/api/docs/quickstart)
+ChatGPT 网页不会仅凭一条文字请求连接到你电脑上的 Blender。要操作本地文件或软件，继续使用下面的本地项目入口和已配置的工具。[官方产品入门](https://learn.chatgpt.com/docs/quickstart)
 
-### 1. 准备环境
+<a id="codex-app"></a>
 
-下载本仓库，进入仓库目录。完整 Python 示例只用标准库，要求 Python 3.10+；JavaScript 示例要求 Node.js 20+。不需要同时安装两种环境。
+## 2. 在 Codex 客户端中使用
+
+1. 打开 Codex 客户端并登录 ChatGPT 账号。如果你的版本是统一的 ChatGPT 桌面应用，从产品切换菜单选择 **Codex**。
+2. 新建项目或打开文件夹，选择本仓库 `awesome-gpt-6-astra-guide` 所在目录。让当前任务工作在这个本地项目里，而不是仅贴一个 GitHub 链接。
+3. 新建任务，在模型／Power 选择器中选择 **Astra**；需要时在 Advanced 中核对具体型号。先用界面默认的推理设置即可。
+4. 发送下面的任务。Codex 会在可用工具及权限范围内读取文件和执行命令，按界面提示处理实际需要的授权。
+
+```text
+先阅读当前项目的 README 和运行说明。
+运行 examples/field_lab.py，输出到一个新的 outputs 子目录，避免覆盖旧结果。
+打开生成的预算、分镜和验收报告，说明三个结果分别意味着什么。
+再生成一个 32 人的对照版本，解释预留金为何不达标。
+交付：可打开的文件路径、实际检查结果，以及无法完成的步骤。
+```
+
+**怎么验收**：输出目录有三张 SVG 和 `results.json`；点击文件可查看。若环境缺少 Python，应明确报告，不把计划当成已运行结果。示例计算本身离线运行；让 Astra 执行和解释任务仍会使用账号额度。
+
+**想直接做作品**：新建一个空项目文件夹，发送：
+
+```text
+为 Paper Circuit Studio 制作一个本地工作坊报名页面。
+包含介绍、人数选择和实时预算：固定成本 920 元，每人 52 元，总预算 2600 元。
+显示剩余金额；不足预算 10% 时提示需要调整。
+使用当前项目已有技术；空项目则采用易运行的简单方案。
+交付源码、启动方法和实际预览，检查 24 人和 32 人两种情况及窄屏显示。
+```
+
+**想玩 Blender**：在同一个本地项目发送：
+
+```text
+按 docs/blender-playbook.md 的桌面机器人练习开始。
+先检查本机 Blender 是否可用，以及现有脚本的输入输出。
+有环境就运行并检查保存的 .blend；缺环境就说明安装步骤。
+先验收七个独立部件和 144 帧时间轴，再安排灯光、镜头和渲染。
+```
+
+Blender 的 MCP 和 Computer Use 是根据任务选择的工具，不是使用 Astra 的通用前置条件。[桌面入口说明](https://learn.chatgpt.com/docs/quickstart) · [Blender 完整练习](blender-playbook.md)
+
+<a id="codex-cli"></a>
+
+## 3. 在 Codex CLI 中使用
+
+### 安装并登录
+
+未安装时，按 [官方 CLI 安装页](https://learn.chatgpt.com/docs/cli) 选择系统对应方式。macOS / Linux 官方独立安装命令为：
 
 ```bash
-python3 --version
-# 使用 JavaScript 才需要下面这条
-node --version
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
 ```
 
-Windows 可用 `python` 代替 `python3`。后面的所有相对路径都以仓库根目录为起点。
+Windows 用户在同一官方页面选择 Windows 安装方式；装好后重新打开终端。CLI 不要求你先安装本仓库的 Python 或 JavaScript 示例依赖。
 
-### 2. 先免费预览请求
+进入你要处理的项目文件夹，然后启动：
 
 ```bash
-python3 examples/astra.py text --dry-run
+cd /path/to/your/project
+codex -m gpt-6-astra
 ```
 
-**预期结果**：终端显示包含 `model: gpt-6-astra`、`input` 和 `reasoning` 的 JSON。此模式不联网、不需要密钥，也不会返回模型答案。它帮助你看清即将发送的内容。
+把 `/path/to/your/project` 换成自己的目录；Windows PowerShell 可使用 `cd 'C:\path\to\your\project'`。第一次启动按提示选择 **Sign in with ChatGPT**，在浏览器完成登录。无需为这条登录路线创建 API key。使用额度按账号与工作区规则计算。[官方 CLI 入门](https://learn.chatgpt.com/docs/cli)
 
-### 3. 设置密钥
+### 确认模型并发出任务
 
-macOS / Linux，可用隐藏输入方式设置，避免把密钥写入命令历史：
+进入 Codex 的交互界面后输入：
+
+```text
+/model
+```
+
+核对当前模型为 Astra，也可在此调整推理强度。输入 `/status` 查看会话配置；这些是 **Codex 内的命令**，不是直接输入到系统终端的命令。
+
+然后像聊天一样发送：
+
+```text
+先阅读当前项目，说明启动方法和主要文件。
+找一个可以独立验收的小改进，说明目标后完成修改。
+运行相关检查，最后给出改动文件、运行结果和仍未验证的部分。
+```
+
+也可以在系统终端启动时附带任务：
 
 ```bash
-# 启动 Bash，以下提示符语法按 Bash 执行
-bash
-read -r -s -p 'OpenAI API key: ' OPENAI_API_KEY
-export OPENAI_API_KEY
+codex -m gpt-6-astra "Read this project and explain how to run it."
 ```
 
-Windows PowerShell：
-
-```powershell
-$astraSecureKey = Read-Host 'OpenAI API key' -AsSecureString
-$env:OPENAI_API_KEY = [System.Net.NetworkCredential]::new('', $astraSecureKey).Password
-```
-
-密钥仅在当前终端会话及其子进程生效。不要放进浏览器代码、截图或提交到 Git；本示例不自动读取 `.env` 文件。
-
-### 4. 发出第一次请求
+在本仓库根目录，可附带一张原创报告图：
 
 ```bash
-python3 examples/astra.py text
-# 或者使用 JavaScript 版本
-node examples/quickstart.mjs
+codex -m gpt-6-astra -i assets/screenshots/workshop-budget.png "Check this budget against examples/fixtures/studio-brief.json."
 ```
 
-**预期结果**：打印中文回答，并在终端显示 token 用量。实际措辞每次可能不同。请求可能需要一段时间；本示例超时设为 180 秒，不自动重试。
+退出后想继续上一任务，在项目目录运行 `codex resume --last`，恢复后再用 `/model` 核对模型。上述 `-m`、`-i`、`resume --last` 已与本机 CLI 帮助核对；本次没有启动新的付费模型会话。
 
-### 5. 替换成自己的任务
-
-```bash
-python3 examples/astra.py text \
-  --prompt '为个人作品集网站写一份需求清单，包括首页、案例和联系方式。' \
-  --output outputs/portfolio-response.json
-```
-
-`--output` 保存完整 API 响应，文件已存在会报错，避免覆盖之前的成果。可用它检查 `status`、`output` 和 `usage`。
-
-### 6. 看图、联网和结构化提取
-
-```bash
-# 图片会发送到 OpenAI API；先使用仓库里的原创预算报告截图
-python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
-
-# 联网检索 OpenAI 官方文档，输出引用来源
-python3 examples/astra.py research
-
-# 把模拟会议记录提取成 JSON
-python3 examples/astra.py extract
-```
-
-更详细的输入、输出和验收方法见 [代码示例](../examples/README.md)。
-
-## 推理强度怎么选
-
-本指南建议：简单分类、短文本先试 `low`；有多个约束的任务再试 `medium` 或 `high`；确有复杂推理需求时评估 `xhigh` / `max`。不要把更高强度视为必然更好，比较结果、用时与费用。
-
-Astra API 支持的强度是 `low`、`medium`、`high`、`xhigh`、`max`。`none` / `minimal` 不适用。Responses API 使用 `reasoning.effort`；Astra 工具调用使用 Responses。不要照搬旧示例中的 `temperature`、`top_p` 等参数。[官方迁移与参数指南](https://developers.openai.com/api/docs/guides/latest-model)
-
-```bash
-python3 examples/astra.py text --effort medium --max-output-tokens 8192
-```
-
-`max_output_tokens` 还需要给推理留空间，不能理解成最终可见回答的字数。过小会导致输出未完成。提高预算前先检查错误，而不是无限增加预算。
+<a id="常见问题"></a>
 
 ## 常见问题
 
-| 现象 | 先检查什么 | 怎么处理 |
-| --- | --- | --- |
-| `缺少 OPENAI_API_KEY` | 是否在同一个终端设置了环境变量 | 重新设置，或先用 `--dry-run` |
-| 401 | key 是否有效 | 在 API 项目里检查密钥；不要发给他人排错 |
-| 403 / 404 | 项目和模型权限 | 确认该项目能使用 `gpt-6-astra`；不静默换模型 |
-| 400 | 参数或输入格式 | 保留最小请求，检查推理强度及图片格式 |
-| 429 | 用量额度、余额或速率限制 | 检查控制台；稍后再试，不循环猛重试 |
-| 响应 `incomplete` | 输出预算及结束原因 | 查看 `incomplete_details`；缩小任务或适度提高预算 |
-| 连接失败 / 超时 | 网络与服务状态 | 检查网络；超时不代表服务器未处理，重复提交可能再次计费 |
-| 联网回答没来源 | 是否启用了 `web_search`，是否返回引用 | 检查完整响应；要求检索，不能把模型记忆当来源 |
-| 模型说生成了文件但找不到 | 是否真的提供了文件工具 | API 文字响应不会自动写文件；用应用程序保存结果 |
-| 3D 页面空白 | 浏览器的 WebGL / WebGPU 支持与资源加载 | 换兼容环境或先看案例截图 |
+| 情况 | 具体处理 |
+| --- | --- |
+| 找不到 Astra | 先更新客户端，检查模型／Advanced 列表、登录账号和工作区开放情况；输入模型名不能绕过权限 |
+| Power 显示别的模型 | 明确选择 Astra 选项，CLI 用 `/model` 核对；不要只靠模型自称判断 |
+| CLI 提示 `codex` 不存在 | 完成官方安装后重开终端，检查安装页的路径提示 |
+| CLI 登录没完成 | 回到登录提示，在浏览器完成授权；检查是否登录了预期账号 |
+| 提示额度已用完 | 查看产品内用量及重置时间；更换入口不代表能绕过共享额度 |
+| 只给了计划，没有成果 | 在同一任务追加“请继续执行并交付文件，报告实际检查结果” |
+| 找不到本地项目文件 | 核对客户端选中的文件夹，或 CLI 启动时的目录 |
+| 说做完了 Blender，但没有文件 | 要求明确 `.blend` 路径和实际打开检查；确认客户端具备本地软件工具 |
 
-### 费用怎么估算
+## API 放在什么时候学？
 
-以首页所列标准文本费率为例，假设一次请求的**实际计费用量**为 2,000 输入 tokens、1,000 输出 tokens，无缓存和工具调用：
+需要把 Astra 接入自己的产品或自动化程序时，再看 [API 进阶说明](api.md) 和 [Python / JavaScript 示例](../examples/README.md)。日常聊天、项目创作、终端协作可以先用上面的三条入口完成。
 
-```text
-2,000 / 1,000,000 × $10 + 1,000 / 1,000,000 × $50 = $0.07
-```
+<a id="用-api-开始"></a>
 
-这是费率计算示例，不是某个任务的实测价格。完整费用还可能包含推理 token、图片输入、工具、长上下文及服务模式差异。API 响应中的 `usage` 和账单才是核对依据。[模型计价说明](https://developers.openai.com/api/docs/models/gpt-6-astra)
-
-建议先用一个小输入、一张图和较低推理强度评估；满意后再扩大任务。
+旧版 API 入门链接已迁至 [API 进阶说明](api.md#用-api-开始)。
