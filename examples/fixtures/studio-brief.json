@@ -1,0 +1,35 @@
+{
+  "title": "Paper Circuit Studio",
+  "origin": "Original fictional teaching fixture created for the flaq.ai Astra guide. Not customer data or a model response.",
+  "workshop": {
+    "currency": "CNY",
+    "budget": 2600,
+    "guests": 24,
+    "reserve_percent": 10,
+    "costs": [
+      {"label": "Studio rental", "basis": "fixed", "unit_cost": 480},
+      {"label": "Facilitator", "basis": "fixed", "unit_cost": 320},
+      {"label": "Printed field notes", "basis": "fixed", "unit_cost": 120},
+      {"label": "Circuit materials", "basis": "guest", "unit_cost": 38},
+      {"label": "Snacks & tea", "basis": "guest", "unit_cost": 14}
+    ]
+  },
+  "film": {
+    "fps": 30,
+    "target_seconds": 20,
+    "shots": [
+      {"id": "S01", "title": "Prepare", "seconds": 5, "caption": "Lay out the paper circuit kit."},
+      {"id": "S02", "title": "Build", "seconds": 7, "caption": "Connect a path. Light an idea."},
+      {"id": "S03", "title": "Share", "seconds": 8, "caption": "Show what you made together."}
+    ]
+  },
+  "release": {
+    "checks": [
+      {"id": "R01", "label": "Keyboard focus visible", "expected": true, "observed": true, "owner": "Mina"},
+      {"id": "R02", "label": "Mobile overflow (px)", "expected": 0, "observed": 18, "owner": "Noah"},
+      {"id": "R03", "label": "Missing image descriptions", "expected": 0, "observed": 2, "owner": "Mina"},
+      {"id": "R04", "label": "Export formats available", "expected": 4, "observed": 4, "owner": "Iris"},
+      {"id": "R05", "label": "Draft survives reload", "expected": true, "observed": true, "owner": "Noah"}
+    ]
+  }
+}

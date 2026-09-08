@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Workshop budget report">
+<title>Workshop budget report</title>
+<desc>Original flaq.ai teaching report. Offline calculations using fictional data; not an API response or third-party product.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} .mono{font-family:monospace}</style>
+<rect x="0" y="0" width="1280" height="720" rx="0" fill="#F4F0E7" stroke="none"/>
+<text x="48" y="43" font-size="15" fill="#222820" font-weight="700" text-anchor="start">flaq.ai  /  ASTRA FIELD LAB</text>
+<text x="1232" y="43" font-size="13" fill="#667160" font-weight="400" text-anchor="end">EXPERIMENT 01   ·   OFFLINE / FICTIONAL DATA</text>
+<text x="48" y="112" font-size="48" fill="#222820" font-weight="700" text-anchor="start">Make the numbers work.</text>
+<text x="48" y="146" font-size="18" fill="#667160" font-weight="400" text-anchor="start">Paper Circuit Studio  /  A workshop budget with a checkable reserve.</text>
+<rect x="48" y="184" width="384" height="126" rx="16" fill="#FFFDF8" stroke="none"/>
+<text x="72" y="216" font-size="13" fill="#65705F" font-weight="700" text-anchor="start">BUDGET / CNY</text>
+<text x="72" y="278" font-size="48" fill="#222820" font-weight="700" text-anchor="start">2,600</text>
+<rect x="448" y="184" width="384" height="126" rx="16" fill="#FFFDF8" stroke="none"/>
+<text x="472" y="216" font-size="13" fill="#65705F" font-weight="700" text-anchor="start">PLANNED SPEND</text>
+<text x="472" y="278" font-size="48" fill="#222820" font-weight="700" text-anchor="start">2,168</text>
+<rect x="848" y="184" width="384" height="126" rx="16" fill="#D9E7BF" stroke="none"/>
+<text x="872" y="216" font-size="13" fill="#65705F" font-weight="700" text-anchor="start">RESERVE / CNY</text>
+<text x="872" y="278" font-size="48" fill="#222820" font-weight="700" text-anchor="start">432</text>
+<rect x="48" y="334" width="760" height="300" rx="16" fill="#FFFDF8" stroke="none"/>
+<text x="72" y="370" font-size="13" fill="#667160" font-weight="700" text-anchor="start">WHAT THE WORKSHOP NEEDS</text>
+<text x="72" y="412" font-size="19" fill="#222820" font-weight="400" text-anchor="start">Studio rental</text>
+<text x="420" y="412" font-size="16" fill="#667160" font-weight="400" text-anchor="start">1 × 480</text>
+<text x="780" y="412" font-size="20" fill="#222820" font-weight="700" text-anchor="end">CNY 480</text>
+<path d="M72,427 L780,427" stroke="#E9E5DA" stroke-width="1" fill="none"/>
+<text x="72" y="457" font-size="19" fill="#222820" font-weight="400" text-anchor="start">Facilitator</text>
+<text x="420" y="457" font-size="16" fill="#667160" font-weight="400" text-anchor="start">1 × 320</text>
+<text x="780" y="457" font-size="20" fill="#222820" font-weight="700" text-anchor="end">CNY 320</text>
+<path d="M72,472 L780,472" stroke="#E9E5DA" stroke-width="1" fill="none"/>
+<text x="72" y="502" font-size="19" fill="#222820" font-weight="400" text-anchor="start">Printed field notes</text>
+<text x="420" y="502" font-size="16" fill="#667160" font-weight="400" text-anchor="start">1 × 120</text>
+<text x="780" y="502" font-size="20" fill="#222820" font-weight="700" text-anchor="end">CNY 120</text>
+<path d="M72,517 L780,517" stroke="#E9E5DA" stroke-width="1" fill="none"/>
+<text x="72" y="547" font-size="19" fill="#222820" font-weight="400" text-anchor="start">Circuit materials</text>
+<text x="420" y="547" font-size="16" fill="#667160" font-weight="400" text-anchor="start">24 × 38</text>
+<text x="780" y="547" font-size="20" fill="#222820" font-weight="700" text-anchor="end">CNY 912</text>
+<path d="M72,562 L780,562" stroke="#E9E5DA" stroke-width="1" fill="none"/>
+<text x="72" y="592" font-size="19" fill="#222820" font-weight="400" text-anchor="start">Snacks &amp; tea</text>
+<text x="420" y="592" font-size="16" fill="#667160" font-weight="400" text-anchor="start">24 × 14</text>
+<text x="780" y="592" font-size="20" fill="#222820" font-weight="700" text-anchor="end">CNY 336</text>
+<rect x="832" y="334" width="400" height="300" rx="16" fill="#26362D" stroke="none"/>
+<text x="860" y="373" font-size="13" fill="#C6D8AD" font-weight="700" text-anchor="start">ROOM TO ADJUST</text>
+<text x="860" y="432" font-size="38" fill="#F9F9ED" font-weight="700" text-anchor="start">24 guests</text>
+<rect x="860" y="463" width="344" height="12" rx="6" fill="#6C7867" stroke="none"/>
+<rect x="860" y="463" width="287" height="12" rx="6" fill="#C2E080" stroke="none"/>
+<text x="860" y="512" font-size="20" fill="#F9F9ED" font-weight="400" text-anchor="start">Reserve target: 10%</text>
+<text x="860" y="554" font-size="25" fill="#C2E080" font-weight="700" text-anchor="start">TARGET MET</text>
+<text x="860" y="594" font-size="17" fill="#C6D8AD" font-weight="400" text-anchor="start">Change guests or budget, then rerun.</text>
+<path d="M48,668 L1232,668" stroke="#667160" stroke-width="1" fill="none"/>
+<text x="48" y="694" font-size="13" fill="#667160" font-weight="400" text-anchor="start">python3 examples/field_lab.py --budget 2600 --guests 24</text>
+<text x="1232" y="694" font-size="13" fill="#667160" font-weight="400" text-anchor="end">Original code + fixture + reproducible report</text>
+</svg>

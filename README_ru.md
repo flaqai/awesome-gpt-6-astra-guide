@@ -43,7 +43,7 @@ node examples/quickstart.mjs --dry-run
 
 ```bash
 python3 examples/astra.py text --prompt 'Спланируй двухдневное мероприятие для кофейни. Бюджет — 2000 юаней, сотрудников двое. Подготовь правила, расписание, подробный бюджет и три рекламных сообщения. Проверь итоговую сумму и обозначь допущения.'
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
 python3 examples/astra.py research
 python3 examples/astra.py extract
 node examples/quickstart.mjs
@@ -51,23 +51,29 @@ node examples/quickstart.mjs
 
 [Примеры кода](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
 
-## Проекты и реальные снимки экрана
+## Запустите наши авторские упражнения
 
-Изображения действительно сняты в браузере. Права на работы принадлежат авторам; проекты целиком не воспроизводились.
+Три самостоятельно разработанных упражнения используют один вымышленный пример студии. Изображения — реальные снимки локально созданных SVG-отчётов в браузере, а не чужие работы или измеренные результаты API Astra.
 
-![Паровоз Tom Krcha: снимок страницы с авторским превью.](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-Паровоз Tom Krcha: снимок страницы с авторским превью. [Исходная публикация](https://x.com/tomkrcha/status/2095756085890310311)
+![Бюджет: расходы 2 168 CNY, резерв 432 CNY.](assets/screenshots/workshop-budget.png)
 
-![iPhone Archive от bluedev: открытая публичная страница.](assets/screenshots/iphone-archive.png)
+Бюджет: расходы 2 168 CNY, резерв 432 CNY.
 
-iPhone Archive от bluedev: открытая публичная страница. [Исходная публикация](https://x.com/blueemi99/status/2096917792737911131) · [Открыть проект](https://iphone-archive.vercel.app/)
+![Раскадровка: 20 секунд при 30 fps, 600 последовательных кадров.](assets/screenshots/craft-storyboard.png)
 
-![Seoul 3D Atlas от synabreu: проверены переключения City и Sunset.](assets/screenshots/seoul-atlas.png)
+Раскадровка: 20 секунд при 30 fps, 600 последовательных кадров.
 
-Seoul 3D Atlas от synabreu: проверены переключения City и Sunset. [Исходная публикация](https://x.com/synabreu/status/2096557555086725159) · [Открыть проект](https://seoul-3d-atlas.synabreu.chatgpt.site/)
+![Проверка: пройдены 3 из 5 вымышленных пунктов, 2 требуют исправления.](assets/screenshots/release-review.png)
 
-[Источники снимков](assets/screenshots/README.md) · [12 примеров](docs/cases.md)
+Проверка: пройдены 3 из 5 вымышленных пунктов, 2 требуют исправления.
+
+[Код, воспроизведение и упражнения](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## Практические процессы
 
@@ -77,7 +83,13 @@ Seoul 3D Atlas от synabreu: проверены переключения City �
 
 ## Проверка и участие
 
-Пройдено 17 автономных тестов. Платные вызовы API и полное воспроизведение проектов не выполнялись. [Проверка](docs/verification.md) · [Источники](docs/sources.md) · [Участие](CONTRIBUTING.md). Авторские материалы и код распространяются по [MIT](LICENSE); сторонние материалы сохраняют свои права.
+Пройдено 28 автономных тестов. Платные вызовы API и полное воспроизведение проектов не выполнялись. [Проверка](docs/verification.md) · [Источники](docs/sources.md) · [Участие](CONTRIBUTING.md). Авторские материалы и код распространяются по [MIT](LICENSE); сторонние материалы сохраняют свои права.
+
+## Играем с 3D: робот собирается сам
+
+Шесть авторских упражнений: настольный робот, анимация сборки, уголок для чтения, ролик о бумажной схеме, грибной персонаж и проверка сцены. Англо-китайское руководство содержит запросы, настройку и собственный скрипт. Проверен только синтаксис Python; запуск в Blender не проверялся.
+
+[Практикум по Blender](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
 
 ## О flaq.ai
 
@@ -90,3 +102,9 @@ Seoul 3D Atlas от synabreu: проверены переключения City �
 **20%** за первый действительный оплаченный заказ приглашённого пользователя и **10%** за последующие. Учитываются подходящие заказы в течение **60 дней после регистрации** этого пользователя.
 
 Войдите и заполните профиль, чтобы управлять ссылками, отслеживать приглашения и настраивать выплаты. Явно обозначайте партнёрские ссылки. Участие, проверка и выплаты регулируются действующим [соглашением](https://flaq.ai/affiliate-agreement/); доход не гарантируется.
+
+## Источники и вдохновение
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+Издатель: 数字生命卡兹克; авторы: 卡兹克、可达; 2026-09-08. Источник идей для процесса; изображения и длинные запросы статьи не воспроизводятся.

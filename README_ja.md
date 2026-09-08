@@ -43,7 +43,7 @@ node examples/quickstart.mjs --dry-run
 
 ```bash
 python3 examples/astra.py text --prompt 'カフェの2日間のイベントを計画してください。予算は2,000人民元、スタッフは2人です。ルール、時間割、予算表、宣伝文3本を作成し、合計額と仮定を確認してください。'
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
 python3 examples/astra.py research
 python3 examples/astra.py extract
 node examples/quickstart.mjs
@@ -51,23 +51,29 @@ node examples/quickstart.mjs
 
 [コード例](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
 
-## 作品と実際のスクリーンショット
+## 独自の実習を動かす
 
-以下はブラウザーで実際に取得した画像です。作品の権利は各作者に帰属し、制作プロジェクト全体を再現したものではありません。
+独自に作成した3つの演習は、架空のスタジオ資料を共有します。画像はローカルで生成した SVG レポートの実際のブラウザー画面です。第三者の作品や Astra API の実測出力ではありません。
 
-![Tom Krcha の蒸気機関車：作者のプレビューを掲載したページ。](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-Tom Krcha の蒸気機関車：作者のプレビューを掲載したページ。 [原投稿](https://x.com/tomkrcha/status/2095756085890310311)
+![予算：支出 2,168 元、予備費 432 元。](assets/screenshots/workshop-budget.png)
 
-![bluedev の iPhone Archive：実際に開いた公開サイト。](assets/screenshots/iphone-archive.png)
+予算：支出 2,168 元、予備費 432 元。
 
-bluedev の iPhone Archive：実際に開いた公開サイト。 [原投稿](https://x.com/blueemi99/status/2096917792737911131) · [公開サイト](https://iphone-archive.vercel.app/)
+![絵コンテ：20秒、30 fps、連続する600フレーム。](assets/screenshots/craft-storyboard.png)
 
-![synabreu の Seoul 3D Atlas：City と Sunset の切り替えを確認。](assets/screenshots/seoul-atlas.png)
+絵コンテ：20秒、30 fps、連続する600フレーム。
 
-synabreu の Seoul 3D Atlas：City と Sunset の切り替えを確認。 [原投稿](https://x.com/synabreu/status/2096557555086725159) · [公開サイト](https://seoul-3d-atlas.synabreu.chatgpt.site/)
+![公開前レビュー：架空の5項目中3項目が合格、2項目は要修正。](assets/screenshots/release-review.png)
 
-[画像の出典](assets/screenshots/README.md) · [12の事例](docs/cases.md)
+公開前レビュー：架空の5項目中3項目が合格、2項目は要修正。
+
+[ソースコード・再現手順・演習](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## 実践ワークフロー
 
@@ -77,7 +83,13 @@ synabreu の Seoul 3D Atlas：City と Sunset の切り替えを確認。 [原�
 
 ## 検証とコントリビューション
 
-17件のオフラインテストに合格しています。有料 API 呼び出しや、全コミュニティ作品の再現検証は行っていません。[検証記録](docs/verification.md) · [出典](docs/sources.md) · [貢献方法](CONTRIBUTING.md)。独自の文章とコードは [MIT](LICENSE)、第三者の素材には各権利が適用されます。
+28件のオフラインテストに合格しています。有料 API 呼び出しや、全コミュニティ作品の再現検証は行っていません。[検証記録](docs/verification.md) · [出典](docs/sources.md) · [貢献方法](CONTRIBUTING.md)。独自の文章とコードは [MIT](LICENSE)、第三者の素材には各権利が適用されます。
+
+## 楽しい3D：組み上がる小さなロボット
+
+卓上ロボット、組立アニメーション、読書コーナー、紙回路の短編、キノコのキャラクター、シーン点検の6演習を追加しました。英語・中国語ガイドにプロンプト、設定、フレーム確認、独自スクリプトがあります。スクリプトは構文確認のみで、Blenderでの実行は未検証です。
+
+[Blender実習ガイド](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
 
 ## flaq.ai について
 
@@ -90,3 +102,9 @@ synabreu の Seoul 3D Atlas：City と Sunset の切り替えを確認。 [原�
 紹介ユーザーの最初の有効な有料注文は **20%**、以降の有効な有料注文は **10%**。対象期間は紹介ユーザーの登録後 **60日間**です。
 
 ログインしてプロフィールを設定すると、紹介リンク、紹介実績、支払い設定を管理できます。紹介時にはアフィリエイト関係を明示してください。資格・審査・支払いは現行の[規約](https://flaq.ai/affiliate-agreement/)に従い、収益を保証するものではありません。
+
+## 参考資料と着想
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+発行：数字生命卡兹克。著者：卡兹克、可达。2026-09-08。制作手順の着想源です。記事の画像や長いプロンプトは転載していません。

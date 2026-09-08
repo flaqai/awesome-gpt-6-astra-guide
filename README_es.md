@@ -43,7 +43,7 @@ Para una llamada real, configura `OPENAI_API_KEY` en la terminal con una clave d
 
 ```bash
 python3 examples/astra.py text --prompt 'Planifica un evento de dos días para una cafetería. Presupuesto: 2.000 yuanes; dos empleados. Entrega reglas, horario, presupuesto desglosado y tres mensajes promocionales. Comprueba la suma e identifica las suposiciones.'
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
 python3 examples/astra.py research
 python3 examples/astra.py extract
 node examples/quickstart.mjs
@@ -51,23 +51,29 @@ node examples/quickstart.mjs
 
 [Código de ejemplo](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
 
-## Proyectos y capturas reales
+## Ejecuta nuestro laboratorio original
 
-Estas imágenes son capturas reales del navegador. Los derechos corresponden a sus creadores; no se han reproducido íntegramente los proyectos.
+Tres ejercicios de creación propia comparten un caso ficticio. Las imágenes son capturas reales del navegador de informes SVG generados localmente, no obras de terceros ni resultados medidos de la API de Astra.
 
-![Tren de vapor de Tom Krcha: captura de la página que muestra su vista previa.](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-Tren de vapor de Tom Krcha: captura de la página que muestra su vista previa. [Publicación original](https://x.com/tomkrcha/status/2095756085890310311)
+![Presupuesto: 2.168 CNY de gasto y 432 CNY de reserva.](assets/screenshots/workshop-budget.png)
 
-![iPhone Archive de bluedev: página pública abierta en el navegador.](assets/screenshots/iphone-archive.png)
+Presupuesto: 2.168 CNY de gasto y 432 CNY de reserva.
 
-iPhone Archive de bluedev: página pública abierta en el navegador. [Publicación original](https://x.com/blueemi99/status/2096917792737911131) · [Proyecto en línea](https://iphone-archive.vercel.app/)
+![Guion gráfico: 20 segundos a 30 fps, con 600 fotogramas continuos.](assets/screenshots/craft-storyboard.png)
 
-![Seoul 3D Atlas de synabreu: se comprobaron los modos City y Sunset.](assets/screenshots/seoul-atlas.png)
+Guion gráfico: 20 segundos a 30 fps, con 600 fotogramas continuos.
 
-Seoul 3D Atlas de synabreu: se comprobaron los modos City y Sunset. [Publicación original](https://x.com/synabreu/status/2096557555086725159) · [Proyecto en línea](https://seoul-3d-atlas.synabreu.chatgpt.site/)
+![Revisión: 3 de 5 comprobaciones ficticias superadas; 2 pendientes.](assets/screenshots/release-review.png)
 
-[Origen de las capturas](assets/screenshots/README.md) · [12 casos](docs/cases.md)
+Revisión: 3 de 5 comprobaciones ficticias superadas; 2 pendientes.
+
+[Código, reproducción y ejercicios](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## Flujos de trabajo
 
@@ -77,7 +83,13 @@ Construye primero una versión mínima que funcione y mejora a partir de captura
 
 ## Verificación y contribuciones
 
-Los ejemplos superaron 17 pruebas sin conexión. No se realizaron llamadas de pago a la API ni una reproducción completa de los proyectos. [Verificación](docs/verification.md) · [Fuentes](docs/sources.md) · [Contribuir](CONTRIBUTING.md). El contenido y código propios usan [MIT](LICENSE); los materiales de terceros conservan sus derechos.
+Los ejemplos superaron 28 pruebas sin conexión. No se realizaron llamadas de pago a la API ni una reproducción completa de los proyectos. [Verificación](docs/verification.md) · [Fuentes](docs/sources.md) · [Contribuir](CONTRIBUTING.md). El contenido y código propios usan [MIT](LICENSE); los materiales de terceros conservan sus derechos.
+
+## 3D divertido: un robot que se monta solo
+
+Seis ejercicios originales: robot de escritorio, montaje animado, rincón de lectura, corto de circuitos de papel, mascota hongo e inspección de escenas. La guía en inglés y chino incluye instrucciones, configuración y un script original. Solo se comprobó su sintaxis; no se ejecutó en Blender.
+
+[Guía práctica de Blender](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
 
 ## Acerca de flaq.ai
 
@@ -90,3 +102,9 @@ Creadores, desarrolladores y educadores pueden unirse al [programa de afiliados 
 **20%** por el primer pedido válido pagado del usuario referido y **10%** por los siguientes. Los pedidos elegibles deben realizarse en los **60 días posteriores al registro** del usuario referido.
 
 Inicia sesión y completa el perfil para gestionar enlaces, referidos y cobros. Identifica claramente los enlaces de afiliado. La elegibilidad, revisión y liquidación siguen el [acuerdo vigente](https://flaq.ai/affiliate-agreement/); no se garantizan ingresos.
+
+## Referencias e inspiración
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+Publicado por 数字生命卡兹克; autores: 卡兹克、可达; 2026-09-08. Inspiración para el flujo de trabajo; no se reproducen imágenes ni instrucciones largas del artículo.

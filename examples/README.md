@@ -2,7 +2,7 @@
 
 [中文首页](../README_zh.md) · [English](../README.md) · [设置 API key](../docs/quickstart.md#用-api-开始)
 
-这些是本仓库编写的教学示例，不是社区作品源码。Python 文件使用标准库，JavaScript 文件使用 Node.js 内置 `fetch`；不用安装 SDK。首页另有一个官方 Python SDK 风格的最小示例。
+这些是本仓库编写的教学示例，不是社区作品源码。Python 文件使用标准库，JavaScript 文件使用 Node.js 内置 `fetch`；不用安装 SDK。API 协议字段依据官方文档，实战数据来自本仓库原创资料。
 
 **要求**：Python 3.10+ 或 Node.js 20+；真实调用需要 `OPENAI_API_KEY` 和模型权限。所有命令在仓库根目录运行。
 
@@ -12,6 +12,15 @@
 | `vision` | 本地 PNG / JPEG / WebP | 截图的布局与组件分析 | 将每条结论与原图比对 |
 | `research` | 默认的官方文档研究问题 | 文本与 API 返回的引用链接 | 打开链接，核对结论是否有支持 |
 | `extract` | 模拟会议记录 | 严格 JSON 结构 | 行动、负责人是否正确；缺失截止时间为 null |
+
+## 00 · 原创离线实验
+
+```bash
+python3 examples/field_lab.py
+python3 examples/astra.py text --brief outputs/field-lab/results.json --dry-run
+```
+
+先生成预算、分镜和验收三份报告，再让 Astra 分析可复算的结果。[完整教程（含英文）](../docs/original-lab.md)。`--brief` 在所有 Python 模式可用，要求 JSON 对象且不超过 64 KiB；真实调用会发送该数据。
 
 ## 01 · 文本与需求拆解
 
@@ -25,13 +34,13 @@ python3 examples/astra.py text --prompt '将咖啡店预约页面拆成 5 个可
 
 ```bash
 python3 examples/astra.py vision \
-  --image assets/screenshots/iphone-archive.png \
-  --prompt '列出截图中可见的按钮和布局，给出制作类似界面的组件树。不要推断未展示的交互。'
+  --image assets/screenshots/workshop-budget.png \
+  --prompt '读取预算表中的固定成本和人均成本，复算支出与预留金；区分可见数据与推测。'
 ```
 
 示例把本地图片编码成 data URL，放在 `input_image` 中。真实请求会上传这张图片。10 MB 是本示例的自设限制，不是官方上限。[官方图片输入说明](https://developers.openai.com/api/docs/guides/images-vision)
 
-**验收**：组件树能对应到截图，且没有声称看到了未展示的数据库、交互或其他页面。想复刻 UI，继续使用 [网页工作流](../docs/workflows.md#workflow-web)。
+**验收**：数字与本地 results.json 一致，且没有声称执行过真实活动或客户测试。若要制作自己的界面，继续使用 [网页工作流](../docs/workflows.md#workflow-web)。
 
 ## 03 · 带来源的联网研究
 
@@ -77,7 +86,7 @@ node examples/quickstart.mjs --dry-run
 node examples/quickstart.mjs
 ```
 
-入口：[quickstart.mjs](quickstart.mjs)。只在 Node.js 服务端环境运行，不要将 API key 放进网页前端。
+入口：[quickstart.mjs](quickstart.mjs)。它读取原创工作室资料，对模拟验收值作严格比较，将证据交给 Astra 生成修复建议。只在 Node.js 服务端环境运行，不要将 API key 放进网页前端。
 
 ## 离线检查与真实调用的区别
 
@@ -89,3 +98,7 @@ python3 -m unittest discover -s tests -v
 ```
 
 离线测试覆盖结果解析、拒绝、截断、缺密钥和 HTTP 错误等边界。没有真实 API 结果截图，也没有性能或费用实测。详见 [验证记录](../docs/verification.md)。
+
+## 06 · Blender 原创桌面机器人
+
+[desk_robot.py](blender/desk_robot.py) 使用 Blender 的 `bpy` 创建七个独立几何部件及 6 秒组装关键帧，保存可编辑 `.blend`。需使用 Blender 后台进程运行，不能直接用系统 Python 执行；不需要 API key。当前只做过语法检查，未运行 Blender、渲染或导出视频。[完整指引与命令](../docs/blender-playbook.md)。

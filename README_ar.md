@@ -43,7 +43,7 @@ node examples/quickstart.mjs --dry-run
 
 ```bash
 python3 examples/astra.py text --prompt 'خطط لفعالية لمدة يومين في مقهى بميزانية 2000 يوان وموظفين اثنين. قدم القواعد والجدول الزمني وتفاصيل الميزانية وثلاث رسائل ترويجية. تحقق من مجموع التكاليف ووضح الافتراضات.'
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
 python3 examples/astra.py research
 python3 examples/astra.py extract
 node examples/quickstart.mjs
@@ -51,23 +51,29 @@ node examples/quickstart.mjs
 
 [أمثلة برمجية](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
 
-## مشروعات ولقطات شاشة حقيقية
+## شغّل تماريننا الأصلية
 
-التُقطت الصور التالية من المتصفح فعلًا. تبقى حقوق الأعمال لأصحابها، ولم تُعَدْ صناعة المشروعات كاملةً هنا.
+تستخدم ثلاثة تمارين أُعدّت خصيصًا لهذا الدليل بيانات استوديو خيالية مشتركة. الصور لقطات فعلية من المتصفح لتقارير SVG مولّدة محليًا، وليست أعمال أطراف أخرى أو نتائج مقاسة لواجهة Astra.
 
-![قطار Tom Krcha البخاري: لقطة للصفحة التي تعرض معاينة صاحب العمل.](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-قطار Tom Krcha البخاري: لقطة للصفحة التي تعرض معاينة صاحب العمل. [المنشور الأصلي](https://x.com/tomkrcha/status/2095756085890310311)
+![الميزانية: إنفاق 2,168 يوانًا واحتياطي 432 يوانًا.](assets/screenshots/workshop-budget.png)
 
-![iPhone Archive من bluedev: صفحة عامة فُتحت في المتصفح.](assets/screenshots/iphone-archive.png)
+الميزانية: إنفاق 2,168 يوانًا واحتياطي 432 يوانًا.
 
-iPhone Archive من bluedev: صفحة عامة فُتحت في المتصفح. [المنشور الأصلي](https://x.com/blueemi99/status/2096917792737911131) · [المشروع المباشر](https://iphone-archive.vercel.app/)
+![لوحة المشاهد: 20 ثانية بمعدل 30 إطارًا في الثانية، أي 600 إطار متتابع.](assets/screenshots/craft-storyboard.png)
 
-![Seoul 3D Atlas من synabreu: تم التحقق من التبديل إلى City وSunset.](assets/screenshots/seoul-atlas.png)
+لوحة المشاهد: 20 ثانية بمعدل 30 إطارًا في الثانية، أي 600 إطار متتابع.
 
-Seoul 3D Atlas من synabreu: تم التحقق من التبديل إلى City وSunset. [المنشور الأصلي](https://x.com/synabreu/status/2096557555086725159) · [المشروع المباشر](https://seoul-3d-atlas.synabreu.chatgpt.site/)
+![مراجعة الإصدار: نجحت 3 من 5 فحوص خيالية، وفحصان يحتاجان إلى إصلاح.](assets/screenshots/release-review.png)
 
-[مصادر الصور](assets/screenshots/README.md) · [12 حالة استخدام](docs/cases.md)
+مراجعة الإصدار: نجحت 3 من 5 فحوص خيالية، وفحصان يحتاجان إلى إصلاح.
+
+[الشيفرة وخطوات إعادة الإنتاج والتمارين](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## مسارات عمل عملية
 
@@ -77,7 +83,13 @@ Seoul 3D Atlas من synabreu: تم التحقق من التبديل إلى City 
 
 ## التحقق والمساهمة
 
-نجحت الأمثلة في 17 اختبارًا دون اتصال. لم تُنفذ استدعاءات API مدفوعة أو إعادة إنتاج كاملة للمشروعات. [سجل التحقق](docs/verification.md) · [المصادر](docs/sources.md) · [المساهمة](CONTRIBUTING.md). المحتوى والكود الأصليان تحت ترخيص [MIT](LICENSE)، مع احتفاظ مواد الأطراف الأخرى بحقوقها.
+نجحت الأمثلة في 28 اختبارًا دون اتصال. لم تُنفذ استدعاءات API مدفوعة أو إعادة إنتاج كاملة للمشروعات. [سجل التحقق](docs/verification.md) · [المصادر](docs/sources.md) · [المساهمة](CONTRIBUTING.md). المحتوى والكود الأصليان تحت ترخيص [MIT](LICENSE)، مع احتفاظ مواد الأطراف الأخرى بحقوقها.
+
+## مرح ثلاثي الأبعاد: روبوت يركّب نفسه
+
+ستة تمارين أصلية: روبوت مكتبي، وتحريك التجميع، وركن قراءة، وفيلم دوائر ورقية، وشخصية فطر، وفحص المشهد. يتضمن الدليل بالإنجليزية والصينية تعليمات وإعدادات وشيفرة أصلية. فُحصت صياغة Python فقط؛ ولم يُختبر التشغيل في Blender.
+
+[دليل Blender العملي](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
 
 ## عن flaq.ai
 
@@ -90,3 +102,9 @@ Seoul 3D Atlas من synabreu: تم التحقق من التبديل إلى City 
 عمولة **20%** على أول طلب مدفوع صالح للمستخدم المُحال، و**10%** على الطلبات التالية. يجب أن تقع الطلبات المؤهلة خلال **60 يومًا بعد تسجيل المستخدم المُحال**.
 
 سجّل الدخول وأكمل ملفك لإدارة الروابط وتتبع الإحالات وإعداد الدفعات. أفصح بوضوح عن علاقة التسويق بالعمولة عند المشاركة. تخضع الأهلية والمراجعة والصرف لـ[الاتفاقية السارية](https://flaq.ai/affiliate-agreement/)، ولا توجد ضمانات للأرباح.
+
+## المراجع ومصادر الإلهام
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+الناشر: 数字生命卡兹克؛ المؤلفان: 卡兹克、可达؛ 2026-09-08. مصدر إلهام لسير العمل، دون إعادة نشر صور المقال أو تعليماته الطويلة.

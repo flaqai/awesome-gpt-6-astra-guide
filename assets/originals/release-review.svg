@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Release acceptance report">
+<title>Release acceptance report</title>
+<desc>Original flaq.ai teaching report. Offline calculations using fictional data; not an API response or third-party product.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} .mono{font-family:monospace}</style>
+<rect x="0" y="0" width="1280" height="720" rx="0" fill="#EAF0F9" stroke="none"/>
+<text x="48" y="43" font-size="15" fill="#172C4A" font-weight="700" text-anchor="start">flaq.ai  /  ASTRA FIELD LAB</text>
+<text x="1232" y="43" font-size="13" fill="#60738F" font-weight="400" text-anchor="end">EXPERIMENT 03   ·   OFFLINE / FICTIONAL DATA</text>
+<text x="48" y="112" font-size="48" fill="#172C4A" font-weight="700" text-anchor="start">Show the evidence before release.</text>
+<text x="48" y="146" font-size="18" fill="#60738F" font-weight="400" text-anchor="start">Paper Circuit Studio  /  Simulated observations, checked by explicit rules.</text>
+<rect x="48" y="186" width="328" height="448" rx="18" fill="#193855" stroke="none"/>
+<text x="78" y="228" font-size="14" fill="#AAC1D9" font-weight="700" text-anchor="start">RELEASE DECISION</text>
+<text x="78" y="302" font-size="64" fill="#FFD19F" font-weight="700" text-anchor="start">HOLD</text>
+<text x="78" y="352" font-size="24" fill="#F1F5FA" font-weight="400" text-anchor="start">3 / 5 checks passed</text>
+<path d="M78,386 L346,386" stroke="#53728B" stroke-width="1" fill="none"/>
+<text x="78" y="428" font-size="18" fill="#CDDBEA" font-weight="400" text-anchor="start">Treat a missing requirement</text>
+<text x="78" y="457" font-size="18" fill="#CDDBEA" font-weight="400" text-anchor="start">as a task to resolve.</text>
+<text x="78" y="514" font-size="22" fill="#B3E2D0" font-weight="700" text-anchor="start">No inferred passes.</text>
+<text x="78" y="584" font-size="15" fill="#AAC1D9" font-weight="400" text-anchor="start">Source: studio-brief.json</text>
+<rect x="400" y="186" width="832" height="448" rx="18" fill="#FFFFFF" stroke="none"/>
+<text x="426" y="224" font-size="13" fill="#60738F" font-weight="700" text-anchor="start">ACCEPTANCE CHECK</text>
+<text x="900" y="224" font-size="13" fill="#60738F" font-weight="700" text-anchor="middle">ACTUAL / TARGET</text>
+<text x="1160" y="224" font-size="13" fill="#60738F" font-weight="700" text-anchor="middle">RESULT</text>
+<text x="426" y="271" font-size="19" fill="#172C4A" font-weight="700" text-anchor="start">Keyboard focus visible</text>
+<text x="426" y="294" font-size="14" fill="#60738F" font-weight="400" text-anchor="start">R01  /  Mina</text>
+<text x="900" y="281" font-size="18" fill="#172C4A" font-weight="400" text-anchor="middle">true / true</text>
+<rect x="1104" y="257" width="112" height="36" rx="18" fill="#E0F2E9" stroke="none"/>
+<text x="1160" y="281" font-size="15" fill="#245E4A" font-weight="700" text-anchor="middle">PASS</text>
+<path d="M426,311 L1206,311" stroke="#E8EEF5" stroke-width="1" fill="none"/>
+<text x="426" y="343" font-size="19" fill="#172C4A" font-weight="700" text-anchor="start">Mobile overflow (px)</text>
+<text x="426" y="366" font-size="14" fill="#60738F" font-weight="400" text-anchor="start">R02  /  Noah</text>
+<text x="900" y="353" font-size="18" fill="#172C4A" font-weight="400" text-anchor="middle">18 / 0</text>
+<rect x="1104" y="329" width="112" height="36" rx="18" fill="#FFE5D6" stroke="none"/>
+<text x="1160" y="353" font-size="15" fill="#924B27" font-weight="700" text-anchor="middle">FIX</text>
+<path d="M426,383 L1206,383" stroke="#E8EEF5" stroke-width="1" fill="none"/>
+<text x="426" y="415" font-size="19" fill="#172C4A" font-weight="700" text-anchor="start">Missing image descriptions</text>
+<text x="426" y="438" font-size="14" fill="#60738F" font-weight="400" text-anchor="start">R03  /  Mina</text>
+<text x="900" y="425" font-size="18" fill="#172C4A" font-weight="400" text-anchor="middle">2 / 0</text>
+<rect x="1104" y="401" width="112" height="36" rx="18" fill="#FFE5D6" stroke="none"/>
+<text x="1160" y="425" font-size="15" fill="#924B27" font-weight="700" text-anchor="middle">FIX</text>
+<path d="M426,455 L1206,455" stroke="#E8EEF5" stroke-width="1" fill="none"/>
+<text x="426" y="487" font-size="19" fill="#172C4A" font-weight="700" text-anchor="start">Export formats available</text>
+<text x="426" y="510" font-size="14" fill="#60738F" font-weight="400" text-anchor="start">R04  /  Iris</text>
+<text x="900" y="497" font-size="18" fill="#172C4A" font-weight="400" text-anchor="middle">4 / 4</text>
+<rect x="1104" y="473" width="112" height="36" rx="18" fill="#E0F2E9" stroke="none"/>
+<text x="1160" y="497" font-size="15" fill="#245E4A" font-weight="700" text-anchor="middle">PASS</text>
+<path d="M426,527 L1206,527" stroke="#E8EEF5" stroke-width="1" fill="none"/>
+<text x="426" y="559" font-size="19" fill="#172C4A" font-weight="700" text-anchor="start">Draft survives reload</text>
+<text x="426" y="582" font-size="14" fill="#60738F" font-weight="400" text-anchor="start">R05  /  Noah</text>
+<text x="900" y="569" font-size="18" fill="#172C4A" font-weight="400" text-anchor="middle">true / true</text>
+<rect x="1104" y="545" width="112" height="36" rx="18" fill="#E0F2E9" stroke="none"/>
+<text x="1160" y="569" font-size="15" fill="#245E4A" font-weight="700" text-anchor="middle">PASS</text>
+<path d="M48,668 L1232,668" stroke="#60738F" stroke-width="1" fill="none"/>
+<text x="48" y="694" font-size="13" fill="#60738F" font-weight="400" text-anchor="start">python3 examples/field_lab.py  /  deterministic comparison of fixture values</text>
+<text x="1232" y="694" font-size="13" fill="#60738F" font-weight="400" text-anchor="end">Original code + fixture + reproducible report</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Paper circuit storyboard">
+<title>Paper circuit storyboard</title>
+<desc>Original flaq.ai teaching report. Offline calculations using fictional data; not an API response or third-party product.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} .mono{font-family:monospace}</style>
+<rect x="0" y="0" width="1280" height="720" rx="0" fill="#171C2B" stroke="none"/>
+<text x="48" y="43" font-size="15" fill="#F6F3EB" font-weight="700" text-anchor="start">flaq.ai  /  ASTRA FIELD LAB</text>
+<text x="1232" y="43" font-size="13" fill="#A8B4CB" font-weight="400" text-anchor="end">EXPERIMENT 02   ·   OFFLINE / FICTIONAL DATA</text>
+<text x="48" y="112" font-size="48" fill="#F6F3EB" font-weight="700" text-anchor="start">A small story. Every frame counted.</text>
+<text x="48" y="146" font-size="18" fill="#A8B4CB" font-weight="400" text-anchor="start">20 seconds  /  30 fps  /  Original procedural vector artwork</text>
+<rect x="48" y="188" width="384" height="370" rx="18" fill="#252D40" stroke="none"/>
+<rect x="64" y="204" width="352" height="194" rx="12" fill="#F0B786" stroke="none"/>
+<rect x="144" y="226" width="190" height="144" rx="6" fill="#F8F3E8" stroke="none"/>
+<path d="M165,250 L228,250" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M165,268 L228,268" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M165,286 L228,286" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M190,326 L300,326" stroke="#D47C42" stroke-width="7" fill="none"/>
+<path d="M300,326 L300,264" stroke="#D47C42" stroke-width="7" fill="none"/>
+<circle cx="300" cy="264" r="15" fill="#CEC9BC" stroke="#635C4D"/>
+<circle cx="190" cy="326" r="14" fill="#343E50" stroke="none"/>
+<text x="72" y="434" font-size="25" fill="#F6F3EB" font-weight="700" text-anchor="start">S01 / Prepare</text>
+<text x="72" y="472" font-size="15" fill="#BFCADE" font-weight="400" text-anchor="start">Lay out the paper circuit kit.</text>
+<text x="72" y="522" font-size="18" fill="#D1E6E3" font-weight="400" text-anchor="start">5s   ·   frames [0, 150)</text>
+<rect x="448" y="188" width="384" height="370" rx="18" fill="#252D40" stroke="none"/>
+<rect x="464" y="204" width="352" height="194" rx="12" fill="#A4C9C7" stroke="none"/>
+<rect x="544" y="226" width="190" height="144" rx="6" fill="#F8F3E8" stroke="none"/>
+<path d="M565,250 L628,250" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M565,268 L628,268" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M565,286 L628,286" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M590,326 L700,326" stroke="#D47C42" stroke-width="7" fill="none"/>
+<path d="M700,326 L700,264" stroke="#D47C42" stroke-width="7" fill="none"/>
+<circle cx="700" cy="264" r="19" fill="#FFF1A6" stroke="#635C4D"/>
+<circle cx="590" cy="326" r="14" fill="#343E50" stroke="none"/>
+<text x="472" y="434" font-size="25" fill="#F6F3EB" font-weight="700" text-anchor="start">S02 / Build</text>
+<text x="472" y="472" font-size="15" fill="#BFCADE" font-weight="400" text-anchor="start">Connect a path. Light an idea.</text>
+<text x="472" y="522" font-size="18" fill="#D1E6E3" font-weight="400" text-anchor="start">7s   ·   frames [150, 360)</text>
+<rect x="848" y="188" width="384" height="370" rx="18" fill="#252D40" stroke="none"/>
+<rect x="864" y="204" width="352" height="194" rx="12" fill="#C3BAE5" stroke="none"/>
+<rect x="944" y="226" width="190" height="144" rx="6" fill="#F8F3E8" stroke="none"/>
+<path d="M965,250 L1028,250" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M965,268 L1028,268" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M965,286 L1028,286" stroke="#A8A695" stroke-width="3" fill="none"/>
+<path d="M990,326 L1100,326" stroke="#D47C42" stroke-width="7" fill="none"/>
+<path d="M1100,326 L1100,264" stroke="#D47C42" stroke-width="7" fill="none"/>
+<circle cx="1100" cy="264" r="23" fill="#FFF1A6" stroke="#635C4D"/>
+<circle cx="990" cy="326" r="14" fill="#343E50" stroke="none"/>
+<path d="M1070,239 L1062.5,232.75" stroke="#866634" stroke-width="3" fill="none"/>
+<path d="M1130,239 L1137.5,232.75" stroke="#866634" stroke-width="3" fill="none"/>
+<path d="M1100,225 L1100.0,215.25" stroke="#866634" stroke-width="3" fill="none"/>
+<text x="872" y="434" font-size="25" fill="#F6F3EB" font-weight="700" text-anchor="start">S03 / Share</text>
+<text x="872" y="472" font-size="15" fill="#BFCADE" font-weight="400" text-anchor="start">Show what you made together.</text>
+<text x="872" y="522" font-size="18" fill="#D1E6E3" font-weight="400" text-anchor="start">8s   ·   frames [360, 600)</text>
+<rect x="48" y="586" width="293" height="18" rx="4" fill="#F0B786" stroke="none"/>
+<rect x="344" y="586" width="411" height="18" rx="4" fill="#A4C9C7" stroke="none"/>
+<rect x="758" y="586" width="471" height="18" rx="4" fill="#C3BAE5" stroke="none"/>
+<text x="48" y="640" font-size="19" fill="#D1E6E3" font-weight="700" text-anchor="start">600 frames  /  DURATION MATCHES</text>
+<text x="1232" y="640" font-size="16" fill="#A8B4CB" font-weight="400" text-anchor="end">Intervals are start-inclusive, end-exclusive.</text>
+<path d="M48,668 L1232,668" stroke="#A8B4CB" stroke-width="1" fill="none"/>
+<text x="48" y="694" font-size="13" fill="#A8B4CB" font-weight="400" text-anchor="start">python3 examples/field_lab.py</text>
+<text x="1232" y="694" font-size="13" fill="#A8B4CB" font-weight="400" text-anchor="end">Original code + fixture + reproducible report</text>
+</svg>

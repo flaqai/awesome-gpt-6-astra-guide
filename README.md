@@ -14,12 +14,12 @@ The latest practical GPT-6 Astra guide curated by the **[flaq.ai](https://flaq.a
 | --- | --- | --- |
 | Try Astra without coding | [Beginner guide](docs/quickstart.md#不用写代码) | A small task with clear acceptance criteria |
 | Make your first API call | [API setup](docs/quickstart.md#用-api-开始) | Python and JavaScript entry points |
-| Explore what people build | [12 selected cases](docs/cases.md) | Creator links, smaller practice tasks, and checks |
+| Try original exercises | [12 original exercises](docs/cases.md) | Three runnable labs and nine extension exercises |
 | Build something yourself | [6 practical workflows](docs/workflows.md) | Websites, games, 3D, video, research, and code review |
 | Analyze images or extract JSON | [Examples](examples/README.md) | Four Python modes and a JavaScript example |
 | Troubleshoot a request | [Errors and cost](docs/quickstart.md#常见问题) | Authentication, limits, incomplete output, and cost basics |
 
-The READMEs are available in 12 languages. The detailed `docs/` tutorials and example diagnostics are currently in Simplified Chinese; the quickstart below works on its own.
+The READMEs are available in 12 languages. The original lab has an English walkthrough; other detailed `docs/` tutorials and example diagnostics are currently in Simplified Chinese; the quickstart below works on its own.
 
 ## What is GPT-6 Astra?
 
@@ -86,7 +86,7 @@ Expect a text answer and token usage. Real requests incur API charges. Keep keys
 
 ```bash
 python3 examples/astra.py text --prompt 'Write a checklist for reviewing a landing page.'
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png \
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png \
   --prompt 'Describe the visible layout and components in English. Separate observations from guesses.'
 python3 examples/astra.py research \
   --prompt 'Research Astra setup in official OpenAI documentation. Answer in English with source links.'
@@ -99,27 +99,29 @@ node examples/quickstart.mjs
 
 These examples call the **OpenAI API directly** and use an OpenAI key. They are not a Flaq.ai endpoint configuration. Model availability on Flaq.ai should be checked separately.
 
-## See what creators have built
+## Run our original field lab
 
-### Reference image → editable Blender model
+Three independently written exercises share one fictional studio brief. These are actual browser captures of locally generated SVG reports, not third-party artwork or Astra API output.
 
-![Tom Krcha's steam train, captured from a community showcase page](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-By **Tom Krcha**. This is a screenshot of the creator's preview, not a Blender project reproduced in this repository. [Original post](https://x.com/tomkrcha/status/2095756085890310311) · [Practice task](docs/cases.md#case-04)
+![Workshop budget: CNY 2,168 spent; CNY 432 reserved.](assets/screenshots/workshop-budget.png)
 
-### Interactive iPhone history
+Workshop budget: CNY 2,168 spent; CNY 432 reserved.
 
-![The iPhone Archive, captured from the live site](assets/screenshots/iphone-archive.png)
+![Storyboard: 20 seconds at 30 fps, with 600 contiguous frames.](assets/screenshots/craft-storyboard.png)
 
-By **bluedev**. The live page was opened and captured; the complete app collection was not tested. [Live project](https://iphone-archive.vercel.app/) · [Original post](https://x.com/blueemi99/status/2096917792737911131)
+Storyboard: 20 seconds at 30 fps, with 600 contiguous frames.
 
-### Seoul in 3D
+![Release review: 3 of 5 fictional checks pass; two need work.](assets/screenshots/release-review.png)
 
-![Seoul 3D Atlas in City and Sunset mode](assets/screenshots/seoul-atlas.png)
+Release review: 3 of 5 fictional checks pass; two need work.
 
-By **synabreu**. City and Sunset controls were checked; geographic accuracy was not audited. [Live project](https://seoul-3d-atlas.synabreu.chatgpt.site/) · [Original post](https://x.com/synabreu/status/2096557555086725159)
-
-Explore all [12 cases](docs/cases.md), including physics toys, games, holographic cards, CAD assembly, video editing, pixel art, and scientific visualization. Practice prompts are written by the flaq.ai team for this guide; they are not the creators' original prompts. [Screenshot provenance](assets/screenshots/README.md)
+[Source code, reproduction steps, and exercises](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## A workflow that is easy to repeat
 
@@ -133,9 +135,15 @@ Explore all [12 cases](docs/cases.md), including physics toys, games, holographi
 
 ## Verification and contributions
 
-The examples passed **17 offline tests**. Screenshots are real browser captures. No paid API calls or end-to-end reproductions of the community projects were performed. See [verification](docs/verification.md), [sources](docs/sources.md), and [contributing](CONTRIBUTING.md).
+The examples passed **28 offline tests**. Screenshots are real browser captures. No paid API calls or end-to-end reproductions of the community projects were performed. See [verification](docs/verification.md), [sources](docs/sources.md), and [contributing](CONTRIBUTING.md).
 
-Original guide content and code use the [MIT License](LICENSE). Third-party artwork, screenshots, trademarks, and linked code retain their respective rights.
+Original guide content and code use the [MIT License](LICENSE). External works and trademarks retain their respective rights. See the [authorship record](docs/originality.md).
+
+## Play with 3D: a robot that assembles itself
+
+Try six original Blender exercises: a desk robot, assembly animation, reading nook, paper-circuit short film, mushroom mascot, and scene inspection. The English/Chinese guide includes prompts, tool setup, frame checks, and an original script. The Blender script has only been checked for Python syntax; no Blender run or new result screenshot is claimed.
+
+[Open the Blender playbook](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
 
 ## About flaq.ai
 
@@ -154,3 +162,9 @@ Create tutorials, reviews, or integration guides? Join the **[Flaq.ai Affiliate 
 Sign in, complete your affiliate profile, and create a referral link in the affiliate workspace. It supports link management, referral tracking, and payout setup. Clearly disclose affiliate links when sharing them. Eligibility, reviews, and payouts follow the current [Affiliate Agreement](https://flaq.ai/affiliate-agreement/); commissions are not guaranteed.
 
 **[Visit flaq.ai](https://flaq.ai/) · [Join the affiliate program](https://flaq.ai/affiliate-program/)**
+
+## References and inspiration
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+Published by 数字生命卡兹克; authors: 卡兹克、可达; September 8, 2026. Used as inspiration for the workflow guide; article images and long prompts are not reproduced.

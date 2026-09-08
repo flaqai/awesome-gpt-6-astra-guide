@@ -16,7 +16,7 @@ README 提供 12 种语言，默认首页为英文。深入教程与示例诊断
 | --- | --- | --- |
 | 不写代码，先试用 | [零基础入门](docs/quickstart.md#不用写代码) | 一份可检查的任务成果 |
 | 用代码调用 Astra | [API 快速开始](docs/quickstart.md#用-api-开始) | 第一次 Python / JavaScript 请求 |
-| 看有哪些强大玩法 | [12 个精选案例](docs/cases.md) | 原帖、作品、复现练习与验收要求 |
+| 看有哪些强大玩法 | [12 个原创练习](docs/cases.md) | 3 个可运行实验与 9 个拓展任务 |
 | 复制指令开始做 | [6 套实战工作流](docs/workflows.md) | 网页、游戏、3D、视频、研究和代码审查提示词 |
 | 看图、研究、提取 JSON | [代码示例说明](examples/README.md) | 4 种 Python 调用模式 |
 | 解决报错与控制成本 | [排错与费用](docs/quickstart.md#常见问题) | 权限、限流、输出截断等问题的处理方法 |
@@ -39,27 +39,29 @@ GPT-6 Astra 是 OpenAI 面向复杂任务的模型，适用于推理、编程、
 
 “能制作视频”通常指组织工具完成工作，例如规划分镜、编写动画代码、调用素材工具、渲染和剪辑，不等于 Astra 模型端点原生接收或输出视频。
 
-## 一眼看看可以做什么
+## 运行本项目原创实验
 
-### 从参考图到 Blender 模型
+三套独立编写的练习共用一份虚构工作室资料。下图是本地程序生成 SVG 报告后取得的真实浏览器截图，不是第三方作品或 Astra API 实测输出。
 
-![Tom Krcha 蒸汽火车作品在参考仓库中的真实页面截图](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-Tom Krcha 的作品展示。截图采集自参考仓库，模型与预览属于原作者。[原帖](https://x.com/tomkrcha/status/2095756085890310311) · [学习路线](docs/cases.md#case-04)
+![工作坊预算：支出 2,168 元，预留 432 元。](assets/screenshots/workshop-budget.png)
 
-### 可交互的 iPhone 历史档案
+工作坊预算：支出 2,168 元，预留 432 元。
 
-![Interactive iPhone History 在线页面实拍](assets/screenshots/iphone-archive.png)
+![分镜时间轴：20 秒、30 fps，连续 600 帧。](assets/screenshots/craft-storyboard.png)
 
-bluedev 的在线作品。[在线体验](https://iphone-archive.vercel.app/) · [原帖](https://x.com/blueemi99/status/2096917792737911131) · [案例解析](docs/cases.md#case-07)
+分镜时间轴：20 秒、30 fps，连续 600 帧。
 
-### 首尔三维地图
+![发布验收：5 项虚构检查通过 3 项，2 项待修复。](assets/screenshots/release-review.png)
 
-![Seoul 3D Atlas 城市与日落模式实拍](assets/screenshots/seoul-atlas.png)
+发布验收：5 项虚构检查通过 3 项，2 项待修复。
 
-synabreu 的在线作品，已检查 City 标签与 Sunset 模式切换。[在线体验](https://seoul-3d-atlas.synabreu.chatgpt.site/) · [原帖](https://x.com/synabreu/status/2096557555086725159)
-
-更多截图见 [精选案例](docs/cases.md) 和 [截图来源清单](assets/screenshots/README.md)。
+[源码、复现步骤与练习](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## 第一个练习：把任务说清楚
 
@@ -78,31 +80,18 @@ synabreu 的在线作品，已检查 City 标签与 Sunset 模式切换。[在�
 
 ## 最小代码示例
 
-安装官方 Python SDK：`python3 -m pip install -U openai`。按 [快速开始](docs/quickstart.md#用-api-开始) 设置 `OPENAI_API_KEY`，再运行：
-
-```python
-from openai import OpenAI
-
-client = OpenAI()
-response = client.responses.create(
-    model="gpt-6-astra",
-    reasoning={"effort": "low"},
-    input="用三个步骤解释：第一次使用 AI 编程，如何验收生成的代码？",
-    max_output_tokens=4096,
-)
-print(response.output_text)
-```
-
-这是教学最小示例。完整示例支持离线预览、失败处理和用量显示，根据 [官方快速开始](https://developers.openai.com/api/docs/quickstart) 编写。本次未进行付费 API 调用，不把模拟测试称为模型效果验证。
+Python 3.10+，无需安装依赖。先离线运行原创实验，再预览发给 Astra 的请求：
 
 ```bash
-# Python 3.10+，完整示例只用标准库，无需安装依赖
-python3 examples/astra.py text --dry-run
-python3 examples/astra.py text
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
-python3 examples/astra.py research
-python3 examples/astra.py extract
+python3 examples/field_lab.py
+python3 examples/astra.py text --brief outputs/field-lab/results.json --dry-run
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png --dry-run
+node examples/quickstart.mjs --dry-run
 ```
+
+按 [快速开始](docs/quickstart.md#用-api-开始) 设置 `OPENAI_API_KEY` 后，去掉 `--dry-run` 才会进行真实付费调用。JSON 数据与选中的图片将发送给 OpenAI；不要输入不希望发送的资料。示例包含失败处理和用量显示，本次未进行付费 API 调用。
+
+[完整原创实验教程](docs/original-lab.md) · [代码与图片创作记录](docs/originality.md)
 
 这些示例直接调用 **OpenAI API**，使用 OpenAI 密钥；Flaq.ai 的模型目录与接口配置需另外确认。
 
@@ -123,6 +112,12 @@ python3 examples/astra.py extract
 - [贡献说明](CONTRIBUTING.md)
 - 原创文档和代码沿用 [MIT License](LICENSE)；第三方案例、品牌、截图内作品和外链代码保留各自权利，不因本仓库许可证而重新授权。
 
+## 玩点有趣的：让小机器人自己组装
+
+新增六种原创 Blender 练习：桌面机器人、零件组装、迷你阅读角、纸电路短片、蘑菇吉祥物与场景找茬。提供中英文提示词、工具准备、帧数验收和原创脚本。脚本仅通过 Python 语法检查，尚未在 Blender 中实跑，未新增模型实测截图。
+
+[打开 Blender 趣味指引](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
+
 ## 关于 flaq.ai
 
 [flaq.ai](https://flaq.ai/) 为 AI Agent 和生产应用提供图片、视频、音乐及语言模型的统一 API 接入。我们整理这份最新指引，希望通过可运行的示例、真实截图和清晰的验收方法，让更多人理解、尝试并评估 AI 的实际能力。
@@ -140,3 +135,9 @@ python3 examples/astra.py extract
 登录后完善联盟资料，即可在联盟中心创建推广链接、跟踪推荐并设置收款方式。分享推广链接时应明确披露联盟关系。有效订单、审核和结算以现行 [联盟协议](https://flaq.ai/affiliate-agreement/) 为准，不保证收益。
 
 **[访问 flaq.ai](https://flaq.ai/) · [加入联盟营销计划](https://flaq.ai/zh/affiliate-program/)**
+
+## 引用来源与创作启发
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+公众号：数字生命卡兹克；作者：卡兹克、可达；2026-09-08。用于工具协作与分阶段创作的选题启发；不转载文章图片或长提示词。

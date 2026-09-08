@@ -43,7 +43,7 @@ Untuk panggilan nyata, atur `OPENAI_API_KEY` di terminal memakai kunci proyek Op
 
 ```bash
 python3 examples/astra.py text --prompt 'Rencanakan acara dua hari untuk kedai kopi. Anggaran 2.000 yuan dengan dua staf. Buat aturan, jadwal, rincian anggaran, dan tiga pesan promosi. Periksa jumlah biaya dan jelaskan asumsi yang dipakai.'
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
 python3 examples/astra.py research
 python3 examples/astra.py extract
 node examples/quickstart.mjs
@@ -51,23 +51,29 @@ node examples/quickstart.mjs
 
 [Contoh kode](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
 
-## Proyek dan tangkapan layar nyata
+## Jalankan latihan orisinal kami
 
-Gambar berikut diambil langsung dari browser. Hak karya tetap milik pembuatnya; proyek tidak direproduksi secara menyeluruh.
+Tiga latihan yang dibuat khusus untuk panduan ini memakai satu contoh studio fiktif. Gambar adalah tangkapan peramban asli dari laporan SVG yang dibuat secara lokal, bukan karya pihak ketiga atau hasil pengukuran API Astra.
 
-![Kereta uap Tom Krcha: halaman yang menampilkan pratinjau pembuatnya.](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-Kereta uap Tom Krcha: halaman yang menampilkan pratinjau pembuatnya. [Postingan asli](https://x.com/tomkrcha/status/2095756085890310311)
+![Anggaran: pengeluaran 2.168 CNY, cadangan 432 CNY.](assets/screenshots/workshop-budget.png)
 
-![iPhone Archive oleh bluedev: halaman publik yang dibuka di browser.](assets/screenshots/iphone-archive.png)
+Anggaran: pengeluaran 2.168 CNY, cadangan 432 CNY.
 
-iPhone Archive oleh bluedev: halaman publik yang dibuka di browser. [Postingan asli](https://x.com/blueemi99/status/2096917792737911131) · [Proyek langsung](https://iphone-archive.vercel.app/)
+![Storyboard: 20 detik pada 30 fps, dengan 600 bingkai berurutan.](assets/screenshots/craft-storyboard.png)
 
-![Seoul 3D Atlas oleh synabreu: perpindahan City dan Sunset telah diperiksa.](assets/screenshots/seoul-atlas.png)
+Storyboard: 20 detik pada 30 fps, dengan 600 bingkai berurutan.
 
-Seoul 3D Atlas oleh synabreu: perpindahan City dan Sunset telah diperiksa. [Postingan asli](https://x.com/synabreu/status/2096557555086725159) · [Proyek langsung](https://seoul-3d-atlas.synabreu.chatgpt.site/)
+![Tinjauan rilis: 3 dari 5 pemeriksaan fiktif lolos; 2 perlu diperbaiki.](assets/screenshots/release-review.png)
 
-[Sumber tangkapan layar](assets/screenshots/README.md) · [12 kasus](docs/cases.md)
+Tinjauan rilis: 3 dari 5 pemeriksaan fiktif lolos; 2 perlu diperbaiki.
+
+[Kode, langkah reproduksi, dan latihan](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## Alur kerja praktis
 
@@ -77,7 +83,13 @@ Buat versi terkecil yang berfungsi, lalu perbaiki berdasarkan tangkapan layar, g
 
 ## Verifikasi dan kontribusi
 
-Contoh lulus 17 pengujian offline. Tidak ada panggilan API berbayar atau reproduksi proyek secara menyeluruh. [Verifikasi](docs/verification.md) · [Sumber](docs/sources.md) · [Kontribusi](CONTRIBUTING.md). Konten dan kode asli memakai [MIT](LICENSE); materi pihak ketiga mempertahankan hak masing-masing.
+Contoh lulus 28 pengujian offline. Tidak ada panggilan API berbayar atau reproduksi proyek secara menyeluruh. [Verifikasi](docs/verification.md) · [Sumber](docs/sources.md) · [Kontribusi](CONTRIBUTING.md). Konten dan kode asli memakai [MIT](LICENSE); materi pihak ketiga mempertahankan hak masing-masing.
+
+## 3D seru: robot yang merakit dirinya
+
+Enam latihan orisinal: robot meja, animasi perakitan, sudut baca, film sirkuit kertas, maskot jamur, dan pemeriksaan adegan. Panduan Inggris/Mandarin memuat prompt, pengaturan, dan skrip orisinal. Hanya sintaks Python yang diperiksa; skrip belum diuji di Blender.
+
+[Panduan praktik Blender](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
 
 ## Tentang flaq.ai
 
@@ -90,3 +102,9 @@ Kreator, developer, dan pengajar dapat mengikuti [Program Afiliasi Flaq.ai](http
 **20%** untuk pesanan berbayar valid pertama pengguna rujukan, lalu **10%** untuk pesanan berikutnya. Pesanan yang memenuhi syarat berada dalam **60 hari setelah pengguna rujukan mendaftar**.
 
 Masuk dan lengkapi profil untuk mengelola tautan, melacak rujukan, dan menyiapkan pembayaran. Ungkapkan hubungan afiliasi dengan jelas. Kelayakan, peninjauan, dan pembayaran mengikuti [perjanjian yang berlaku](https://flaq.ai/affiliate-agreement/); penghasilan tidak dijamin.
+
+## Referensi dan inspirasi
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+Diterbitkan oleh 数字生命卡兹克; penulis: 卡兹克、可达; 2026-09-08. Inspirasi alur kerja; gambar dan prompt panjang artikel tidak disalin.

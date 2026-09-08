@@ -37,7 +37,7 @@ class ExamplesTest(unittest.TestCase):
 
     def test_vision_roundtrip_and_dry_run_redaction(self):
         import base64
-        path = Path(__file__).resolve().parents[1] / 'assets/screenshots/iphone-archive.png'
+        path = Path(__file__).resolve().parents[1] / 'assets/screenshots/workshop-budget.png'
         req = astra.build_request(self.args('vision', image=str(path)))
         url = req['input'][0]['content'][1]['image_url']
         self.assertEqual(base64.b64decode(url.split(',', 1)[1]), path.read_bytes())

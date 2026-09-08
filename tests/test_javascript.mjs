@@ -36,3 +36,13 @@ test('HTTP failure exits with error', () => {
   assert.equal(r.status, 1);
   assert.match(r.stderr, /429/);
 });
+
+test('original release evidence identifies both failures in the request', () => {
+  const r = run(`globalThis.fetch=()=>{throw new Error('unexpected network')}; ${load}`, ['--dry-run']);
+  assert.equal(r.status, 0);
+  const input = JSON.parse(r.stdout).input;
+  const evidence = JSON.parse(input.slice(input.indexOf('\n') + 1));
+  assert.equal(evidence.mode, 'offline_fixture');
+  assert.equal(evidence.project, 'Paper Circuit Studio');
+  assert.deepEqual(evidence.checks.filter(x => !x.passed).map(x => x.id), ['R02', 'R03']);
+});

@@ -1,0 +1,17 @@
+{
+  "captured_on": "2026-09-08",
+  "method": "Actual browser screenshots of locally generated SVG reports; no image editing",
+  "content": "Original fictional teaching data, not Astra API responses",
+  "generator": "examples/field_lab.py",
+  "fixture": "examples/fixtures/studio-brief.json",
+  "files": {
+    "examples/field_lab.py": "005c9291325039b6558902c33fd55a349196ce7ebfc1b8a942a3c3495936d802",
+    "examples/fixtures/studio-brief.json": "c11000146ae38a79b66ced704342cd67ba0090da5b06fb7068bd9e914fcd2e38",
+    "assets/originals/workshop-budget.svg": "08f5ca8c3acd6980892e353bad69277df23ea20d00119d11e94edf90b326f4ab",
+    "assets/originals/craft-storyboard.svg": "dea8c0bfae06ed34d8f98edaabc91f9b46f7943e46a9b2576b47dae8249fc907",
+    "assets/originals/release-review.svg": "9ae97ac4a628d2f0e4c3a1b0055a1c124d8936e5b85fcf69efe1fea30c754f8c",
+    "assets/screenshots/workshop-budget.png": "475c6dffbba4045eae749e93835a30d3f86884539dc701e6aecb9474d7c885dd",
+    "assets/screenshots/craft-storyboard.png": "7d952384e5004bf54c7612a138d921aabb9a21b77f952f59d38506273a1b218b",
+    "assets/screenshots/release-review.png": "b5817d06d6f57f0d0a781c7a8b3d40d922307f663dbe822ddbe77c35b123bf1e"
+  }
+}

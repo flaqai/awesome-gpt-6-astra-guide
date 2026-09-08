@@ -17,9 +17,9 @@
 
 ## 案例发现记录（仅用于溯源）
 
-早期案例发现记录对应社区目录提交 [90cbefd](https://github.com/magiccreator-ai/awesome-gpt-6-astra/commit/90cbefd35c9fc5e3cd2e3c3ba55f8e15975fc498)。这里保留来源路径，以便核对案例和火车预览的采集出处。本指南的品牌介绍、教程组织与多语言 README 由 flaq.ai 团队负责。
+早期案例发现记录对应社区目录提交 [90cbefd](https://github.com/magiccreator-ai/awesome-gpt-6-astra/commit/90cbefd35c9fc5e3cd2e3c3ba55f8e15975fc498)。这里保留来源路径，以便核对早期案例的发现出处；旧截图已从当前目录移除。本指南的品牌介绍、教程组织与多语言 README 由 flaq.ai 团队负责。
 
-每个案例都保留原帖链接，供读者直接查看作者说明。本次没有逐一读取所有 X 原帖；不把目录转述升级成独立验证，也没有照搬整份目录。制作耗时、帧率、物体数量和“一次提示完成”等说法不作为本指南的能力保证。
+[社区延伸阅读](community-references.md) 保留原帖链接，供读者直接查看作者说明。本次没有逐一读取所有 X 原帖；不把目录转述升级成独立验证，也没有照搬整份目录。制作耗时、帧率、物体数量和“一次提示完成”等说法不作为本指南的能力保证。
 
 ## 三类内容如何区分
 
@@ -36,3 +36,16 @@
 - [联盟协议](https://flaq.ai/affiliate-agreement/)：核对订单资格、审核、结算及联盟关系披露。
 
 上述联盟页面与协议于 2026-09-08 读取；各语言 README 使用同一规则摘要，具体以官方现行条款为准。README 链接是公开入口，没有虚构专属推广码或替任何人注册联盟账户。Flaq.ai 团队署名由项目维护者要求加入；示例仍直接调用 OpenAI API，不据此声称 Flaq.ai 已支持 Astra。
+
+## 当前原创实验
+
+当前展示使用本项目的原创数据、计算程序、SVG 和浏览器截图，详见 [创作记录](originality.md) 与 [截图清单](../assets/screenshots/README.md)。这些截图不是付费 API 结果或第三方作品。
+
+## 新增：Blender 趣味创作来源（2026-09-08）
+
+- [《用GPT-6 Astra操控Blender玩3D，保姆级教程来了。》](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)：公众号数字生命卡兹克，署名卡兹克、可达。已在浏览器中读取正文、标题和作者。用于 [趣味指引](blender-playbook.md) 的工具协作思路，不转载其图片或长提示词，不把作者的耗时、额度和演示结果升级为本项目实测。
+- [Blender Lab MCP Server](https://www.blender.org/lab/mcp-server/)：已读取，确认 Blender 5.1+、扩展、客户端与服务端的要求。
+- [Blender 命令行参数](https://docs.blender.org/manual/en/latest/advanced/command_line/arguments.html)：已读取，确认后台脚本执行和 Python 错误退出码参数。
+- [OpenAI Computer Use](https://learn.chatgpt.com/docs/computer-use) 与 [MCP 指引](https://learn.chatgpt.com/zh-Hans/docs/extend/mcp)：核对客户端插件与工具连接方式。
+
+新增桌面机器人脚本由本指南独立编写，仅验证 Python 语法，未在 Blender 实跑。所有语言 README 底部都保留微信原文链接、署名与引用范围。

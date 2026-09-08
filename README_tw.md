@@ -43,7 +43,7 @@ node examples/quickstart.mjs --dry-run
 
 ```bash
 python3 examples/astra.py text --prompt '為咖啡店規劃兩天活動。預算人民幣 2000 元，兩位店員。交付活動規則、時間表、預算和三則文案。確認預算加總正確，並明確標示假設。'
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
 python3 examples/astra.py research
 python3 examples/astra.py extract
 node examples/quickstart.mjs
@@ -51,23 +51,29 @@ node examples/quickstart.mjs
 
 [程式範例](examples/README.md) · [Python](examples/astra.py) · [JavaScript](examples/quickstart.mjs)
 
-## 作品與真實截圖
+## 執行本專案原創實驗
 
-以下圖片為實際瀏覽器截圖。社群作品保留原作者權利；未完整重現其工程。
+三套獨立編寫的練習共用一份虛構工作室資料。圖片是本機程式生成 SVG 報告後取得的瀏覽器截圖，並非第三方作品或 Astra API 實測輸出。
 
-![Tom Krcha 的蒸汽火車：作者預覽的頁面截圖。](assets/screenshots/steam-train-reference.png)
+```bash
+python3 examples/field_lab.py
+# Alternative scenario / 独立输出目录
+python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
+```
 
-Tom Krcha 的蒸汽火車：作者預覽的頁面截圖。 [原帖](https://x.com/tomkrcha/status/2095756085890310311)
+![工作坊預算：支出 2,168 元，預留 432 元。](assets/screenshots/workshop-budget.png)
 
-![bluedev 的 iPhone Archive：實際開啟的線上頁面。](assets/screenshots/iphone-archive.png)
+工作坊預算：支出 2,168 元，預留 432 元。
 
-bluedev 的 iPhone Archive：實際開啟的線上頁面。 [原帖](https://x.com/blueemi99/status/2096917792737911131) · [線上作品](https://iphone-archive.vercel.app/)
+![分鏡時間軸：20 秒、30 fps，共 600 個連續影格。](assets/screenshots/craft-storyboard.png)
 
-![synabreu 的首爾 3D 地圖：已檢查 City 與 Sunset 切換。](assets/screenshots/seoul-atlas.png)
+分鏡時間軸：20 秒、30 fps，共 600 個連續影格。
 
-synabreu 的首爾 3D 地圖：已檢查 City 與 Sunset 切換。 [原帖](https://x.com/synabreu/status/2096557555086725159) · [線上作品](https://seoul-3d-atlas.synabreu.chatgpt.site/)
+![發布驗收：5 項虛構檢查通過 3 項，2 項待修正。](assets/screenshots/release-review.png)
 
-[截圖來源](assets/screenshots/README.md) · [12 個案例](docs/cases.md)
+發布驗收：5 項虛構檢查通過 3 項，2 項待修正。
+
+[原始碼、重現步驟與練習](docs/original-lab.md) · [SVG / PNG](assets/screenshots/README.md)
 
 ## 實作流程
 
@@ -77,7 +83,13 @@ synabreu 的首爾 3D 地圖：已檢查 City 與 Sunset 切換。 [原帖](http
 
 ## 驗證與貢獻
 
-17 項離線測試已通過，尚未執行付費 API 呼叫。社群案例未全面實測。[驗證紀錄](docs/verification.md) · [資料來源](docs/sources.md) · [貢獻說明](CONTRIBUTING.md)。原創文字與程式使用 [MIT](LICENSE)；第三方素材保留各自權利。
+28 項離線測試已通過，尚未執行付費 API 呼叫。社群案例未全面實測。[驗證紀錄](docs/verification.md) · [資料來源](docs/sources.md) · [貢獻說明](CONTRIBUTING.md)。原創文字與程式使用 [MIT](LICENSE)；第三方素材保留各自權利。
+
+## 趣味 3D：讓小機器人自行組裝
+
+新增六種原創 Blender 練習：桌面機器人、零件組裝、閱讀角、紙電路短片、蘑菇吉祥物與場景檢查。中英文指引提供提示詞、工具設定、影格驗收和原創腳本。腳本僅通過語法檢查，尚未在 Blender 執行。
+
+[開啟 Blender 趣味指引](docs/blender-playbook.md) · [Python](examples/blender/desk_robot.py)
 
 ## 關於 flaq.ai
 
@@ -90,3 +102,9 @@ synabreu 的首爾 3D 地圖：已檢查 City 與 Sunset 切換。 [原帖](http
 首筆有效付費訂單 **20%**；後續有效付費訂單 **10%**。有效訂單的歸因窗口為推薦使用者註冊後 **60 天**。
 
 登入並完成聯盟資料後，可管理推薦連結、追蹤推薦及設定收款方式。分享時應揭露聯盟關係。資格、審核與結算以現行 [聯盟協議](https://flaq.ai/affiliate-agreement/) 為準，不保證收益。
+
+## 引用來源與創作啟發
+
+[用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
+
+公眾號：数字生命卡兹克；作者：卡兹克、可达；2026-09-08。作為流程設計的啟發，不轉載文章圖片或長提示詞。

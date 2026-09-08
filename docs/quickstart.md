@@ -96,8 +96,8 @@ python3 examples/astra.py text \
 ### 6. 看图、联网和结构化提取
 
 ```bash
-# 图片会发送到 OpenAI API；先使用仓库里的公开案例截图
-python3 examples/astra.py vision --image assets/screenshots/iphone-archive.png
+# 图片会发送到 OpenAI API；先使用仓库里的原创预算报告截图
+python3 examples/astra.py vision --image assets/screenshots/workshop-budget.png
 
 # 联网检索 OpenAI 官方文档，输出引用来源
 python3 examples/astra.py research
