@@ -6,6 +6,12 @@ O guia mais recente do GPT-6 Astra, organizado pela **equipe da [flaq.ai](https:
 [English](README.md) · [简体中文](README_zh.md) · [繁體中文](README_tw.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · **Português** · [Русский](README_ru.md) · [Bahasa Indonesia](README_id.md) · [العربية](README_ar.md)
 <!-- languages:end -->
 
+## Mais ideias do X
+
+2026-09-22: oito exercícios a partir de sete publicações lidas diretamente: legendas, cor, migração de motores, recursos modulares, pixel art em planilhas, armazém, fontes históricas e critérios de conclusão. Incluem fontes e limites de verificação; os resultados não foram reproduzidos. Resumo em inglês, instruções detalhadas em chinês.
+
+[Guia de casos do X](docs/x-playbook.md) · [Registro de fontes do X](docs/research/x-sources-2026-09-22.json)
+
 Última revisão: 2026-09-08. Este é um guia independente da equipe, não a documentação oficial da OpenAI. Os READMEs estão disponíveis em 12 idiomas; os tutoriais detalhados e as mensagens de diagnóstico estão atualmente em chinês simplificado.
 
 [Primeiros passos](docs/quickstart.md) · [12 casos](docs/cases.md) · [6 fluxos](docs/workflows.md) · [Exemplos de código](examples/README.md)
@@ -111,3 +117,5 @@ Entre na conta e complete o perfil para gerenciar links, indicações e configur
 [用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
 
 Publicado por 数字生命卡兹克; autores: 卡兹克、可达; 2026-09-08. Inspiração para o fluxo de trabalho; sem reprodução das imagens ou dos prompts longos do artigo.
+
+[Registro de fontes do X · 2026-09-22](docs/x-playbook.md) · [JSON](docs/research/x-sources-2026-09-22.json)

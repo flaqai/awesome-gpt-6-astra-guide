@@ -55,3 +55,11 @@
 [官方模型选择](https://learn.chatgpt.com/docs/models)、[产品快速开始](https://learn.chatgpt.com/docs/quickstart)、[Codex CLI](https://learn.chatgpt.com/docs/cli) 已读取，用于核对 ChatGPT / Work、桌面 Codex、Astra 选择器和 CLI 的 ChatGPT 登录路线。`codex -m gpt-6-astra` 来自官方模型页；`-m`、`-i`、`resume --last` 同时与本机 CLI 帮助核对。没有据此保证所有账号已开放 Astra，也未进行新的付费会话验证。
 
 首页不再将 API key、JSON 参数和 token 计费作为入门要求；这些内容保留在 [API 进阶说明](api.md)。微信文章继续位于所有 README 底部，作为 Blender 创作启发来源。
+
+## X 社区检索（2026-09-22）
+
+新增 [X 使用场景指引](x-playbook.md) 与 [结构化来源清单](research/x-sources-2026-09-22.json)。直接读取七条 X 原帖及部分作者回复，按创作者演示、品牌展示、推广内容、研究主张和个人经验标明来源性质。八项练习中，字幕和调色引用同一原帖，不计作独立交叉验证。
+
+查询包括 `GPT-6 Astra`、`from:JaydenCoach Astra`、`"Astra" (Excel OR spreadsheet OR slides)`。网页搜索只用于发现线索；最终收录均回到 X 阅读正文。历史研究条目的作者以实际原帖显示的 `@deredleritt3r` 为准，未沿用报道中的旧用户名链接。
+
+日期分别记录原帖显示日期与读取日期。本次没有核验付费服务、视频全部内容、性能或研究结论，没有下载第三方媒体和源码。新增提示词、虚构库存数据及验收方法是本指南原创教学内容，不是原作者提示词。

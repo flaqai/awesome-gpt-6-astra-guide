@@ -6,6 +6,12 @@
 [English](README.md) · [简体中文](README_zh.md) · [繁體中文](README_tw.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [Bahasa Indonesia](README_id.md) · **العربية**
 <!-- languages:end -->
 
+## أفكار إضافية من X
+
+2026-09-22: ثمانية تمارين من سبعة منشورات أصلية قُرئت مباشرة: الترجمة النصية، والألوان، ونقل المحركات، والأصول المعيارية، ورسوم خلايا الجداول، وواجهة مستودع، وفحص المصادر التاريخية، ومعايير الإنجاز. تتضمن المصادر وحدود التحقق؛ لم تُعَد التجارب. الملخص بالإنجليزية والتعليمات المفصلة بالصينية.
+
+[دليل حالات X](docs/x-playbook.md) · [سجل مصادر X](docs/research/x-sources-2026-09-22.json)
+
 آخر مراجعة: 2026-09-08. هذا دليل مستقل أعدّه الفريق، وليس وثائق OpenAI الرسمية. تتوفر ملفات README بـ 12 لغة، بينما الدروس التفصيلية ورسائل التشخيص متاحة حاليًا بالصينية المبسطة.
 
 [البدء](docs/quickstart.md) · [12 حالة استخدام](docs/cases.md) · [6 مسارات عمل](docs/workflows.md) · [أمثلة برمجية](examples/README.md)
@@ -111,3 +117,5 @@ python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
 [用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
 
 الناشر: 数字生命卡兹克؛ المؤلفان: 卡兹克、可达؛ 2026-09-08. مصدر إلهام لسير العمل، دون إعادة نشر صور المقال أو تعليماته الطويلة.
+
+[سجل مصادر X · 2026-09-22](docs/x-playbook.md) · [JSON](docs/research/x-sources-2026-09-22.json)

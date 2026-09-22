@@ -6,6 +6,12 @@ Panduan GPT-6 Astra terbaru yang disusun oleh **tim [flaq.ai](https://flaq.ai/)*
 [English](README.md) · [简体中文](README_zh.md) · [繁體中文](README_tw.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · **Bahasa Indonesia** · [العربية](README_ar.md)
 <!-- languages:end -->
 
+## Ide tambahan dari X
+
+2026-09-22: delapan latihan dari tujuh unggahan yang dibaca langsung: takarir, warna, migrasi mesin, aset modular, seni piksel spreadsheet, antarmuka gudang, pemeriksaan sejarah, dan kriteria selesai. Sumber serta batas verifikasi dicantumkan; hasil belum direproduksi. Ringkasan dalam bahasa Inggris, prompt terperinci dalam Mandarin.
+
+[Panduan kasus X](docs/x-playbook.md) · [Catatan sumber X](docs/research/x-sources-2026-09-22.json)
+
 Terakhir diperiksa: 2026-09-08. Ini panduan independen dari tim, bukan dokumentasi resmi OpenAI. README tersedia dalam 12 bahasa; tutorial mendalam dan pesan diagnostik saat ini menggunakan bahasa Mandarin sederhana.
 
 [Langkah awal](docs/quickstart.md) · [12 kasus](docs/cases.md) · [6 alur kerja](docs/workflows.md) · [Contoh kode](examples/README.md)
@@ -111,3 +117,5 @@ Masuk dan lengkapi profil untuk mengelola tautan, melacak rujukan, dan menyiapka
 [用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
 
 Diterbitkan oleh 数字生命卡兹克; penulis: 卡兹克、可达; 2026-09-08. Inspirasi alur kerja; gambar dan prompt panjang artikel tidak disalin.
+
+[Catatan sumber X · 2026-09-22](docs/x-playbook.md) · [JSON](docs/research/x-sources-2026-09-22.json)

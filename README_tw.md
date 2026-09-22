@@ -6,6 +6,12 @@
 [English](README.md) · [简体中文](README_zh.md) · **繁體中文** · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [Bahasa Indonesia](README_id.md) · [العربية](README_ar.md)
 <!-- languages:end -->
 
+## 從 X 發現更多玩法
+
+2026-09-22：直接閱讀七則 X 原帖，整理八個練習：字幕、調色、引擎遷移、模組化資產、試算表像素畫、倉庫介面、歷史資料核對與完成條件。每項附作者、來源、指令及驗收方式；尚未重現原作。英文概覽與中文詳細指引。
+
+[查看 X 場景指引](docs/x-playbook.md) · [X 來源紀錄](docs/research/x-sources-2026-09-22.json)
+
 最後核對：2026-09-08。這是團隊獨立整理的指南，並非 OpenAI 官方文件。README 支援 12 種語言；深入教學與範例診斷訊息目前為簡體中文。
 
 [入門教學](docs/quickstart.md) · [12 個案例](docs/cases.md) · [6 套工作流程](docs/workflows.md) · [程式範例](examples/README.md)
@@ -111,3 +117,5 @@ python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
 [用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
 
 公眾號：数字生命卡兹克；作者：卡兹克、可达；2026-09-08。作為流程設計的啟發，不轉載文章圖片或長提示詞。
+
+[X 來源紀錄 · 2026-09-22](docs/x-playbook.md) · [JSON](docs/research/x-sources-2026-09-22.json)

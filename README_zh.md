@@ -6,6 +6,12 @@
 [English](README.md) · **简体中文** · [繁體中文](README_tw.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [Bahasa Indonesia](README_id.md) · [العربية](README_ar.md)
 <!-- languages:end -->
 
+## 从 X 发现更多玩法
+
+2026-09-22：直接读取七条 X 原帖，整理八个练习：字幕、调色、引擎迁移、模块化资产、表格像素画、仓库界面、历史资料核对和完成条件。每项包含作者、原帖、可复制指令、验收标准与未验证范围；社区展示不等于本项目已复现。
+
+[打开 X 场景指引](docs/x-playbook.md) · [X 来源记录](docs/research/x-sources-2026-09-22.json)
+
 **资料核对：2026-09-08** · flaq.ai 团队整理 · 非 OpenAI 官方文档
 
 README 提供 12 种语言，默认首页为英文。深入教程与示例诊断信息目前为简体中文。教程与练习由 flaq.ai 团队整理；案例保留原作者与出处，不代表作者公开了制作提示词，也不保证复现其完整作品。
@@ -154,3 +160,5 @@ python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
 [用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
 
 公众号：数字生命卡兹克；作者：卡兹克、可达；2026-09-08。用于工具协作与分阶段创作的选题启发；不转载文章图片或长提示词。
+
+[X 来源记录 · 2026-09-22](docs/x-playbook.md) · [JSON](docs/research/x-sources-2026-09-22.json)

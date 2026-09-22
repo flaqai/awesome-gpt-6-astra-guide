@@ -6,6 +6,12 @@ The latest practical GPT-6 Astra guide curated by the **[flaq.ai](https://flaq.a
 **English** · [简体中文](README_zh.md) · [繁體中文](README_tw.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [Bahasa Indonesia](README_id.md) · [العربية](README_ar.md)
 <!-- languages:end -->
 
+## More ideas from X
+
+2026-09-22: eight new exercises from seven directly read X posts—subtitles, color grading, engine migration, modular assets, spreadsheet pixel art, a warehouse interface, historical evidence checks, and clear completion criteria. Each includes attribution, a starter task, acceptance checks, and verification limits. These are community reports and original practice briefs, not reproduced results. The overview is in English; detailed prompts are in Chinese.
+
+[Explore the X playbook](docs/x-playbook.md) · [X source log](docs/research/x-sources-2026-09-22.json)
+
 **Last reviewed: September 8, 2026.** An independent team-curated guide; not official OpenAI documentation. Dates identify the reviewed edition, and product details may change.
 
 ## Start here: choose your app
@@ -153,3 +159,5 @@ Sign in, complete your affiliate profile, and create a referral link in the affi
 [用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
 
 Published by 数字生命卡兹克; authors: 卡兹克、可达; September 8, 2026. Used as inspiration for the workflow guide; article images and long prompts are not reproduced.
+
+[X source log · 2026-09-22](docs/x-playbook.md) · [JSON](docs/research/x-sources-2026-09-22.json)

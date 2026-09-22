@@ -1,0 +1,95 @@
+{
+  "checked_on": "2026-09-22",
+  "method": "Read public X search results and individual post pages using an existing signed-in browser session. No posting, messaging, asset download, or author workflow reproduction.",
+  "date_note": "Publication dates reflect the displayed post date; timezone not independently normalized.",
+  "sources": [
+    {
+      "id": "capcut",
+      "author": "Jayden Douglass | AI Coach",
+      "handle": "JaydenCoach",
+      "url": "https://x.com/JaydenCoach/status/2098136605135364534",
+      "published_date_as_displayed": "2026-09-11",
+      "accessed_on": "2026-09-22",
+      "kind": "creator_demo",
+      "summary_zh": "作者描述 Astra 生成 .cube LUT 与字幕，再在 CapCut PC 中调整。",
+      "verification_zh": "已读取原帖全文与日期；看到嵌入视频入口，未完整播放或测试文件导入。",
+      "reproduced": false
+    },
+    {
+      "id": "engine",
+      "author": "eta",
+      "handle": "seftsaint",
+      "url": "https://x.com/seftsaint/status/2101395711015497764",
+      "published_date_as_displayed": "2026-09-20",
+      "accessed_on": "2026-09-22",
+      "kind": "creator_demo",
+      "summary_zh": "作者将已有 Godot 概念迁移到 Unreal，并调整树木和光照；回复说明部分资产来自 Meshy。",
+      "verification_zh": "已读取原帖及作者回复；未下载工程、运行引擎或核验完整游戏功能。",
+      "reproduced": false,
+      "supporting_links": [
+        "https://x.com/seftsaint/status/2101553995420672417",
+        "https://x.com/seftsaint/status/2101396401171337545"
+      ]
+    },
+    {
+      "id": "assets",
+      "author": "Jerome | InsaneUnreal",
+      "handle": "insaneUEFN",
+      "url": "https://x.com/insaneUEFN/status/2100237060573466631",
+      "published_date_as_displayed": "2026-09-16",
+      "accessed_on": "2026-09-22",
+      "kind": "creator_workflow",
+      "summary_zh": "作者描述结合 Atlas、Tripo、Blender 与 UEFN，优化资产并复用模块；提及手动缩放。",
+      "verification_zh": "已读取原帖全文；未运行外部工具或核验模型质量与数量。",
+      "reproduced": false
+    },
+    {
+      "id": "excel",
+      "author": "Higgsfield AI",
+      "handle": "higgsfield_ai",
+      "url": "https://x.com/higgsfield_ai/status/2097465326133002488",
+      "published_date_as_displayed": "2026-09-09",
+      "accessed_on": "2026-09-22",
+      "kind": "vendor_demo",
+      "summary_zh": "品牌账号展示让 Astra 将 GPT Image 2.5 视觉内容用于 Excel 单元格动画。",
+      "verification_zh": "已读取原帖及视频入口；未获取工作簿，不能确认动画机制或兼容性。",
+      "reproduced": false
+    },
+    {
+      "id": "warehouse",
+      "author": "Sean Wallace",
+      "handle": "sean_wallace_",
+      "url": "https://x.com/sean_wallace_/status/2100596939511496848",
+      "published_date_as_displayed": "2026-09-17",
+      "accessed_on": "2026-09-22",
+      "kind": "promotional_showcase",
+      "summary_zh": "帖子介绍 Enter Pro 与 Astra 的可探索仓库界面，附产品推广入口。",
+      "verification_zh": "已读取全文；属于带产品推广链接的展示，未验证系统、库存数据或代码。",
+      "reproduced": false
+    },
+    {
+      "id": "history",
+      "author": "prinz",
+      "handle": "deredleritt3r",
+      "url": "https://x.com/deredleritt3r/status/2100608983492862201",
+      "published_date_as_displayed": "2026-09-17",
+      "accessed_on": "2026-09-22",
+      "kind": "author_research_claim",
+      "summary_zh": "作者报告用 Astra 分析一战无线电密文，并与舰船历史日志交叉核对。",
+      "verification_zh": "已读取原帖全文；未独立核验解密、日志或首次破解的优先权。",
+      "reproduced": false
+    },
+    {
+      "id": "scope",
+      "author": "Shohei",
+      "handle": "shohei_botter",
+      "url": "https://x.com/shohei_botter/status/2102318133226905766",
+      "published_date_as_displayed": "2026-09-22",
+      "accessed_on": "2026-09-22",
+      "kind": "personal_experience",
+      "summary_zh": "作者分享用明确完成条件处理 Astra 过度工程化的个人经验。",
+      "verification_zh": "已读取日文原帖；不是对照实验或效果保证。",
+      "reproduced": false
+    }
+  ]
+}

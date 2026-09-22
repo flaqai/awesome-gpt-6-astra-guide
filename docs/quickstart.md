@@ -151,3 +151,7 @@ codex -m gpt-6-astra -i assets/screenshots/workshop-budget.png "Check this budge
 <a id="用-api-开始"></a>
 
 旧版 API 入门链接已迁至 [API 进阶说明](api.md#用-api-开始)。
+
+## 继续尝试：X 社区的新场景
+
+[2026-09-22 新增八个练习](x-playbook.md)，包括字幕、调色、资产整理、Excel 像素画、仓库界面与史料核对。使用客户端直接提交任务即可；原帖、作者、验收标准和未验证范围均有记录。

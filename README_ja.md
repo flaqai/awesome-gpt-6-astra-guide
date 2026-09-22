@@ -6,6 +6,12 @@
 [English](README.md) · [简体中文](README_zh.md) · [繁體中文](README_tw.md) · **日本語** · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [Bahasa Indonesia](README_id.md) · [العربية](README_ar.md)
 <!-- languages:end -->
 
+## Xから見つけた新しい使い方
+
+2026-09-22：7件の原投稿を直接読み、字幕、色調整、エンジン移行、部品の再利用、表計算のピクセル画、倉庫画面、史料照合、完了条件の8演習を追加。出典と確認範囲を明記しています。作品の再現検証は未実施です。概要は英語、詳細な指示は中国語です。
+
+[Xの実践ガイド](docs/x-playbook.md) · [X出典記録](docs/research/x-sources-2026-09-22.json)
+
 最終確認：2026-09-08。OpenAI の公式ドキュメントではなく、チームによる独立したガイドです。README は12言語に対応しています。詳細なチュートリアルとサンプルの診断メッセージは現在、簡体字中国語です。
 
 [入門](docs/quickstart.md) · [12の事例](docs/cases.md) · [6つのワークフロー](docs/workflows.md) · [コード例](examples/README.md)
@@ -111,3 +117,5 @@ python3 examples/field_lab.py --guests 32 --out outputs/field-lab-32
 [用GPT-6 Astra操控Blender玩3D，保姆级教程来了。](https://mp.weixin.qq.com/s/yK65CvMwzhQqu5_E5EfVVQ)
 
 発行：数字生命卡兹克。著者：卡兹克、可达。2026-09-08。制作手順の着想源です。記事の画像や長いプロンプトは転載していません。
+
+[X出典記録 · 2026-09-22](docs/x-playbook.md) · [JSON](docs/research/x-sources-2026-09-22.json)
